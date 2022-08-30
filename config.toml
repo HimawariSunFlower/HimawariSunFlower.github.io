@@ -151,7 +151,7 @@ theme = "LoveIt"
       [params.page.comment.utterances]
         enable = true
         # owner/repo
-        repo = "HimawariSunFlower/hugo-blog-comment"
+        repo = "HimawariSunFlower/HimawariSunFlower.github.io"
         issueTerm = "pathname"
         label = ""
         lightTheme = "github-light"

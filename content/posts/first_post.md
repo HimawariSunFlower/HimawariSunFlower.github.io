@@ -1,7 +1,7 @@
 ---
 title: "上传github,ssh报错及解决方法"
 date: 2022-08-30T11:11:27+08:00
-draft: true
+draft: false
 ---
 
 
