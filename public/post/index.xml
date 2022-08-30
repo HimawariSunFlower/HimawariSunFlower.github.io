@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>http://example.org/post/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 30 Aug 2022 09:21:50 +0800</lastBuildDate><atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>http://example.org/post/my-first-post/</link>
+      <pubDate>Tue, 30 Aug 2022 09:21:50 +0800</pubDate>
+      
+      <guid>http://example.org/post/my-first-post/</guid>
+      <description>上传github报错 ssh: Could not resolve hostname github.com:HimawariSunFlower: nodename nor servname provided, or not known fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists 首先怀疑是公司gitlab账户覆盖掉github账户 ssh-add</description>
+    </item>
+    
+  </channel>
+</rss>

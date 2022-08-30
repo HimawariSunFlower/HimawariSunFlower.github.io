@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - 标签 - HimawariSunFlower&#39;s home</title>
+        <link>http://HimawariSunFlower.github.io/tags/</link>
+        <description>Tags - 标签 - HimawariSunFlower&#39;s home</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>aleena35ed@gmail.com (qiyuanh)</managingEditor>
+            <webMaster>aleena35ed@gmail.com (qiyuanh)</webMaster><atom:link href="http://HimawariSunFlower.github.io/tags/" rel="self" type="application/rss+xml" /></channel>
+</rss>

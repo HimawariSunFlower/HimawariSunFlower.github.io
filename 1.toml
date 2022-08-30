@@ -1,0 +1,239 @@
+baseURL = "http://wtysos11.github.io/"
+# [en, zh-cn, fr, ...] 设置默认的语言
+defaultContentLanguage = "zh-cn"
+# 网站语言, 仅在这里 CN 大写
+languageCode = "zh-CN"
+# 是否包括中日韩文字
+hasCJKLanguage = true
+# 网站标题
+title = "实践出真知"
+
+# 更改使用 Hugo 构建网站时使用的默认主题
+theme = "LoveIt"
+# images = ["/resources/starsky.webp"]
+[languages]
+  [languages.en]
+    weight = 1
+    title = "Practise make perfect"
+    languageCode = "en"
+    languageName = "English"
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "Posts"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.en.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "Tags"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.en.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Categories"
+      url = "/categories/"
+      title = ""
+      weight = 3
+  [languages.en.params]
+   description = "Blog of backend technology"
+   keywords = ["go","kubernetes"]
+  [languages.zh-cn]
+    weight = 2
+    title = "实践出真知"
+    # 网站语言, 仅在这里 CN 大写
+    languageCode = "zh-CN"
+    languageName = "简体中文"
+    # 是否包括中日韩文字
+    hasCJKLanguage = true
+    [[languages.zh-cn.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "文章"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.zh-cn.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "标签"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.zh-cn.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "分类"
+      url = "/categories/"
+      title = ""
+      weight = 3
+  [languages.zh-cn.params]
+   description = "后端技术博客"
+   keywords = ["go","kubernetes"]
+[params]
+  # LoveIt 主题版本
+  version = "0.2.X"
+  [params.footer]
+    enable = true
+    # LoveIt 新增 | 0.2.0 自定义内容 (支持 HTML 格式)
+    custom = ''
+    # LoveIt 新增 | 0.2.0 是否显示 Hugo 和主题信息
+    hugo = true
+    # LoveIt 新增 | 0.2.0 是否显示版权信息
+    copyright = true
+    # LoveIt 新增 | 0.2.0 是否显示作者
+    author = true
+    # 网站创立年份
+    since = 2021
+    # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
+    icp = ""
+    # 许可协议信息 (支持 HTML 格式)
+    license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+  [params.search]
+    enable = true
+    type = "algolia"
+    contentLength = 4000
+    placeholder = ""
+    maxResultLength = 10
+    snippetLength = 50
+    highlightTag = "em"
+    absoluteURL = false
+  [params.search.algolia]
+    index = "myblog"
+    appID = "46GYFZ8M81"
+    searchKey = "10948d6f4e69e7991b7a4f9cb5095f13"
+ [params.section]
+    # section 页面每页显示文章数量
+    paginate = 20
+    # 日期格式 (月和日)
+    dateFormat = "01-02"
+  [params.list]
+    # list 页面每页显示文章数量
+    paginate = 20
+    # 日期格式 (月和日)
+    dateFormat = "01-02"
+  [params.home]
+   [params.home.profile]
+      enable = true
+      subtitle = "Life is like a Markov chain. It is independent of your past, and only depends on your present."
+      # 是否为副标题显示打字机动画
+      typeit = true
+      # 是否显示社交账号
+      social = true
+
+ [params.social]
+  Github = "http://github.com/wtysos11/"
+  StackOverflow = "https://stackoverflow.com/users/7086030/carlo-wu"
+ 
+ [params.page]
+    [params.page.code]
+      # 是否显示代码块的复制按钮
+      copy = true
+      # 默认展开显示的代码行数
+      maxShownLines = 30
+   [params.page.math]
+      enable = true
+      # 默认块定界符是 $$ ... $$ 和 \\[ ... \\]
+      blockLeftDelimiter = ""
+      blockRightDelimiter = ""
+      # 默认行内定界符是 $ ... $ 和 \\( ... \\)
+      inlineLeftDelimiter = ""
+      inlineRightDelimiter = ""
+      # KaTeX 插件 copy_tex
+      copyTex = true
+      # KaTeX 插件 mhchem
+      mhchem = true
+    [params.page.share]
+      enable = true
+      Twitter = true
+      Facebook = true
+      Linkedin = false
+      Whatsapp = true
+      Pinterest = false
+      Tumblr = false
+      HackerNews = false
+      Reddit = false
+      VK = false
+      Buffer = false
+      Xing = false
+      Line = true
+      Instapaper = false
+      Pocket = false
+      Digg = false
+      Stumbleupon = false
+      Flipboard = false
+      Weibo = true
+      Renren = false
+      Myspace = true
+      Blogger = true
+      Baidu = false
+      Odnoklassniki = false
+      Evernote = true
+      Skype = false
+      Trello = false
+      Mix = false
+   [params.page.comment]
+      enable = true
+      [params.page.comment.utterances]
+        enable = true
+        # owner/repo
+        repo = "wtysos11/hugo-blog-comment"
+        issueTerm = "pathname"
+        label = ""
+        lightTheme = "github-light"
+        darkTheme = "github-dark"
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+    pre = ""
+    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+    post = ""
+    name = "文章"
+    url = "/posts/"
+    # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "标签"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "分类"
+    url = "/categories/"
+    title = ""
+    weight = 3
+
+# Hugo 解析文档的配置
+[markup]
+  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+[author]
+  name = "Timothy Wu"
+  email = "wtysos11@163.com"
+  link = "https://github.com/wtysos11/"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
