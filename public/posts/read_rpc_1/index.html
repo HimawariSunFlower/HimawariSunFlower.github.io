@@ -4,32 +4,32 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>上传github,ssh报错及解决方法 - HimawariSunFlower&#39;s home</title><meta name="Description" content="后端技术博客"><meta property="og:title" content="上传github,ssh报错及解决方法" />
-<meta property="og:description" content="上传github报错 ssh: Could not resolve hostname github.com:HimawariSunFlower: nodename nor servname provided, or not known fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists 首先怀疑是公司gitlab账户覆盖掉github账户 ssh-add" />
+        <title>go-kratos初体验 - HimawariSunFlower&#39;s home</title><meta name="Description" content="后端技术博客"><meta property="og:title" content="go-kratos初体验" />
+<meta property="og:description" content="#动手之前需要理清楚微服务逻辑 1.wire生成出来的wire_gen.go，goland同包读取不到，飘红。(实际编译成功了) :插件中卸载 go" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://HimawariSunFlower.github.io/posts/first_post/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-08-30T11:11:27+08:00" />
-<meta property="article:modified_time" content="2022-08-30T14:48:47+08:00" /><meta property="og:site_name" content="HimawariSunFlower&#39;s home" />
+<meta property="og:url" content="http://HimawariSunFlower.github.io/posts/read_rpc_1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-30T16:21:14+08:00" />
+<meta property="article:modified_time" content="2022-08-30T16:21:14+08:00" /><meta property="og:site_name" content="HimawariSunFlower&#39;s home" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="上传github,ssh报错及解决方法"/>
-<meta name="twitter:description" content="上传github报错 ssh: Could not resolve hostname github.com:HimawariSunFlower: nodename nor servname provided, or not known fatal: Could not read from remote repository. Please make sure you have the correct access rights and the repository exists 首先怀疑是公司gitlab账户覆盖掉github账户 ssh-add"/>
+<meta name="twitter:title" content="go-kratos初体验"/>
+<meta name="twitter:description" content="#动手之前需要理清楚微服务逻辑 1.wire生成出来的wire_gen.go，goland同包读取不到，飘红。(实际编译成功了) :插件中卸载 go"/>
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://HimawariSunFlower.github.io/posts/first_post/" /><link rel="next" href="http://HimawariSunFlower.github.io/posts/read_rpc_1/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://HimawariSunFlower.github.io/posts/read_rpc_1/" /><link rel="prev" href="http://HimawariSunFlower.github.io/posts/first_post/" /><link rel="next" href="http://HimawariSunFlower.github.io/posts/read_gf_1/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "上传github,ssh报错及解决方法",
+        "headline": "go-kratos初体验",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/HimawariSunFlower.github.io\/posts\/first_post\/"
-        },"genre": "posts","wordcount":  229 ,
-        "url": "http:\/\/HimawariSunFlower.github.io\/posts\/first_post\/","datePublished": "2022-08-30T11:11:27+08:00","dateModified": "2022-08-30T14:48:47+08:00","publisher": {
+            "@id": "http:\/\/HimawariSunFlower.github.io\/posts\/read_rpc_1\/"
+        },"genre": "posts","wordcount":  864 ,
+        "url": "http:\/\/HimawariSunFlower.github.io\/posts\/read_rpc_1\/","datePublished": "2022-08-30T16:21:14+08:00","dateModified": "2022-08-30T16:21:14+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -100,37 +100,93 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">上传github,ssh报错及解决方法</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">go-kratos初体验</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/HimawariSunFlower" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>qiyuanh</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-30">2022-08-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 229 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-30">2022-08-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 864 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>上传github报错</p>
-<pre tabindex="0"><code>ssh: Could not resolve hostname github.com:HimawariSunFlower: nodename nor servname provided, or not known
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists
-</code></pre><p>首先怀疑是公司gitlab账户覆盖掉github账户</p>
-<p>ssh-add -l 确实没发现github的密钥</p>
-<p>ssh -T <a href="mailto:git@github.com" rel="">git@github.com</a>是通的，ping不通</p>
-<p>尝试方法1 <a href="https://blog.csdn.net/Thanksgining/article/details/104383480" target="_blank" rel="noopener noreffer ">hosts修改去可以ping通</a>，没有用</p>
-<p>尝试方法2 <a href="https://lujiahao0708.github.io/p/5c6f02af.html#:~:text=Mac%20%E5%A4%9A%20Git%20%E8%B4%A6%E6%88%B7%E9%85%8D%E7%BD%AE%20%E9%80%9A%E5%B8%B8%E5%85%AC%E5%8F%B8%E4%BB%A3%E7%A0%81%E4%B8%80%E8%88%AC%E6%89%98%E7%AE%A1%E5%9C%A8%E5%85%AC%E5%8F%B8%E8%87%AA%E5%BB%BA%20Gitlab%20%E6%9C%8D%E5%8A%A1%E4%B8%8A%EF%BC%8C%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1%E5%9C%A8%20GitHub,Coding%20%E8%BF%99%E6%A0%B7%E7%9A%84%E7%BD%91%E7%AB%99%E4%B8%8A%E3%80%82%20Git%20%E8%B4%A6%E6%88%B7%E7%BB%8F%E5%B8%B8%E5%88%87%E6%8D%A2%E9%9D%9E%E5%B8%B8%E4%B8%8D%E6%96%B9%E4%BE%BF%EF%BC%8C%E8%BF%99%E5%B0%B1%E9%9C%80%E8%A6%81%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AA%20Git%20%E8%B4%A6%E6%88%B7%EF%BC%8C%E4%BB%A5%E5%90%91%E4%B8%8D%E5%90%8C%E7%9A%84%E7%BD%91%E7%AB%99%20push%20%E4%BB%A3%E7%A0%81%E3%80%82" target="_blank" rel="noopener noreffer ">添加多个账户，添加到ssh-add</a>，没有用，方法2延伸问题，ssh passphrase忘记，mac钥匙串可以找回</p>
-<p>最终解决方法 <a href="https://stackoverflow.com/questions/9393409/ssh-could-not-resolve-hostname-github-com-name-or-service-not-known-fatal-th" target="_blank" rel="noopener noreffer ">dns冲洗</a></p>
-<pre tabindex="0"><code>#Other ways to flush your dns, in windows in your terminal
-ipconfig /flushdns
-
-#on macos
-dscacheutil -flushcache
-
-#on linux
-service nscd restart
-</code></pre></div><div class="post-footer" id="post-footer">
+            </div><div class="content" id="content"><p>#动手之前需要理清楚微服务逻辑</p>
+<p>1.wire生成出来的wire_gen.go，goland同包读取不到，飘红。(实际编译成功了)<br>
+:插件中卸载 go wire util 就好了</p>
+<p>2.proto文件，import &ldquo;google/api/annotations.proto&rdquo; 等应用飘红。<br>
+:在goland设置的protobuf里添加third_party,<br>
+belike:
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/img/1.png"
+        data-srcset="/img/1.png, /img/1.png 1.5x, /img/1.png 2x"
+        data-sizes="auto"
+        alt="/img/1.png"
+        title="这是图片" /></p>
+<p>3.项目结构</p>
+<pre tabindex="0"><code>  .
+├── Dockerfile  
+├── LICENSE
+├── Makefile  
+├── README.md
+├── api // 下面维护了微服务使用的proto文件以及根据它们所生成的go文件
+│   └── helloworld
+│       └── v1
+│           ├── error_reason.pb.go
+│           ├── error_reason.proto
+│           ├── error_reason.swagger.json
+│           ├── greeter.pb.go
+│           ├── greeter.proto
+│           ├── greeter.swagger.json
+│           ├── greeter_grpc.pb.go
+│           └── greeter_http.pb.go
+├── cmd  // 整个项目启动的入口文件
+│   └── server
+│       ├── main.go
+│       ├── wire.go  // 我们使用wire来维护依赖注入
+│       └── wire_gen.go
+├── configs  // 这里通常维护一些本地调试用的样例配置文件
+│   └── config.yaml
+├── generate.go
+├── go.mod
+├── go.sum
+├── internal  // 该服务所有不对外暴露的代码，通常的业务逻辑都在这下面，使用internal避免错误引用
+│   ├── biz   // 业务逻辑的组装层，类似 DDD 的 domain 层，data 类似 DDD 的 repo，而 repo 接口在这里定义，使用依赖倒置的原则。
+│   │   ├── README.md
+│   │   ├── biz.go
+│   │   └── greeter.go
+│   ├── conf  // 内部使用的config的结构定义，使用proto格式生成
+│   │   ├── conf.pb.go
+│   │   └── conf.proto
+│   ├── data  // 业务数据访问，包含 cache、db 等封装，实现了 biz 的 repo 接口。我们可能会把 data 与 dao 混淆在一起，data 偏重业务的含义，它所要做的是将领域对象重新拿出来，我们去掉了 DDD 的 infra层。
+│   │   ├── README.md
+│   │   ├── data.go
+│   │   └── greeter.go
+│   ├── server  // http和grpc实例的创建和配置
+│   │   ├── grpc.go
+│   │   ├── http.go
+│   │   └── server.go
+│   └── service  // 实现了 api 定义的服务层，类似 DDD 的 application 层，处理 DTO 到 biz 领域实体的转换(DTO -&gt; DO)，同时协同各类 biz 交互，但是不应处理复杂逻辑
+│       ├── README.md
+│       ├── greeter.go
+│       └── service.go
+└── third_party  // api 依赖的第三方proto
+    ├── README.md
+    ├── google
+    │   └── api
+    │       ├── annotations.proto
+    │       ├── http.proto
+    │       └── httpbody.proto
+    └── validate
+        ├── README.md
+        └── validate.proto
+</code></pre><p>4.cmd下的main文件由wire依赖注入，需要理解wire</p>
+<p>5.proto指令还可以生成service<br>
+kratos proto server api/user/v1/user.proto -t internal/service</p>
+<p>6.<a href="https://github.com/go-kratos/examples" target="_blank" rel="noopener noreffer ">插件掩饰库</a><br>
+7.<a href="https://github.com/Windfarer/kratos-realworld" target="_blank" rel="noopener noreffer ">实战库</a></p>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -139,7 +195,7 @@ service nscd restart
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://HimawariSunFlower.github.io/posts/first_post/" data-title="上传github,ssh报错及解决方法"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://HimawariSunFlower.github.io/posts/first_post/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://HimawariSunFlower.github.io/posts/first_post/" data-title="上传github,ssh报错及解决方法" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://HimawariSunFlower.github.io/posts/first_post/" data-title="上传github,ssh报错及解决方法"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://HimawariSunFlower.github.io/posts/first_post/" data-title="上传github,ssh报错及解决方法"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="http://HimawariSunFlower.github.io/posts/first_post/" data-title="上传github,ssh报错及解决方法" data-description=""><i class="fab fa-blogger fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="http://HimawariSunFlower.github.io/posts/first_post/" data-title="上传github,ssh报错及解决方法"><i class="fab fa-evernote fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://HimawariSunFlower.github.io/posts/read_rpc_1/" data-title="go-kratos初体验"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://HimawariSunFlower.github.io/posts/read_rpc_1/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://HimawariSunFlower.github.io/posts/read_rpc_1/" data-title="go-kratos初体验" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://HimawariSunFlower.github.io/posts/read_rpc_1/" data-title="go-kratos初体验"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://HimawariSunFlower.github.io/posts/read_rpc_1/" data-title="go-kratos初体验"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="http://HimawariSunFlower.github.io/posts/read_rpc_1/" data-title="go-kratos初体验" data-description=""><i class="fab fa-blogger fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="http://HimawariSunFlower.github.io/posts/read_rpc_1/" data-title="go-kratos初体验"><i class="fab fa-evernote fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -151,8 +207,8 @@ service nscd restart
         </section>
     </div>
 
-    <div class="post-nav">
-            <a href="/posts/read_rpc_1/" class="next" rel="next" title="go-kratos初体验">go-kratos初体验<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/posts/first_post/" class="prev" rel="prev" title="上传github,ssh报错及解决方法"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>上传github,ssh报错及解决方法</a>
+            <a href="/posts/read_gf_1/" class="next" rel="next" title="gframe 框架源码阅读1">gframe 框架源码阅读1<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="utterances" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
