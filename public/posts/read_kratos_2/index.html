@@ -4,32 +4,32 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>gframe 框架源码阅读1 - HimawariSunFlower&#39;s home</title><meta name="Description" content="后端技术博客"><meta property="og:title" content="gframe 框架源码阅读1" />
-<meta property="og:description" content="" />
+        <title>go-kratos 开发1 - HimawariSunFlower&#39;s home</title><meta name="Description" content="后端技术博客"><meta property="og:title" content="go-kratos 开发1" />
+<meta property="og:description" content="1.错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误 { &#34;errors&#34;: { &#34;internal&#34;: [ &#34;error&#34; ] } } 无法显示具体信息，必须按规定的" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://HimawariSunFlower.github.io/posts/read_gf_1/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-08-30T16:21:14+08:00" />
-<meta property="article:modified_time" content="2022-09-05T14:44:41+08:00" /><meta property="og:site_name" content="HimawariSunFlower&#39;s home" />
+<meta property="og:url" content="http://HimawariSunFlower.github.io/posts/read_kratos_2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-05T15:08:57+08:00" />
+<meta property="article:modified_time" content="2022-09-05T15:08:57+08:00" /><meta property="og:site_name" content="HimawariSunFlower&#39;s home" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="gframe 框架源码阅读1"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="go-kratos 开发1"/>
+<meta name="twitter:description" content="1.错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误 { &#34;errors&#34;: { &#34;internal&#34;: [ &#34;error&#34; ] } } 无法显示具体信息，必须按规定的"/>
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://HimawariSunFlower.github.io/posts/read_gf_1/" /><link rel="prev" href="http://HimawariSunFlower.github.io/posts/read_kratos_1/" /><link rel="next" href="http://HimawariSunFlower.github.io/posts/read_kratos_2/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://HimawariSunFlower.github.io/posts/read_kratos_2/" /><link rel="prev" href="http://HimawariSunFlower.github.io/posts/read_gf_1/" /><link rel="next" href="http://HimawariSunFlower.github.io/posts/mac_1/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "gframe 框架源码阅读1",
+        "headline": "go-kratos 开发1",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/HimawariSunFlower.github.io\/posts\/read_gf_1\/"
-        },"genre": "posts","wordcount":  0 ,
-        "url": "http:\/\/HimawariSunFlower.github.io\/posts\/read_gf_1\/","datePublished": "2022-08-30T16:21:14+08:00","dateModified": "2022-09-05T14:44:41+08:00","publisher": {
+            "@id": "http:\/\/HimawariSunFlower.github.io\/posts\/read_kratos_2\/"
+        },"genre": "posts","wordcount":  408 ,
+        "url": "http:\/\/HimawariSunFlower.github.io\/posts\/read_kratos_2\/","datePublished": "2022-09-05T15:08:57+08:00","dateModified": "2022-09-05T15:08:57+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -100,17 +100,47 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">gframe 框架源码阅读1</h1><div class="post-meta">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">go-kratos 开发1</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/HimawariSunFlower" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>qiyuanh</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-30">2022-08-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 0 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 0 分钟&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-05">2022-09-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 408 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>目录</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"></div><div class="post-footer" id="post-footer">
+            </div><div class="content" id="content"><p>1.错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误</p>
+<pre tabindex="0"><code>{
+  &#34;errors&#34;: {
+    &#34;internal&#34;: [
+      &#34;error&#34;
+    ]
+  }
+}
+</code></pre><p>无法显示具体信息，必须按<a href="https://go-kratos.dev/docs/component/errors" target="_blank" rel="noopener noreffer ">规定的错误处理</a>，定义生成pb文件之后包装一下</p>
+<pre tabindex="0"><code>    v1.ErrorParamError(&#34;jwt token missing&#34;)
+    v1.ErrorParamError(err.Error())
+</code></pre><p>2.尝试docker部署微服务，docker build 报错</p>
+<pre tabindex="0"><code>failed to solve with frontend dockerfile.v0: failed to create LLB definition: unexpected status code [manifests stable-slim]: 403 Forbidden
+</code></pre><p>设置 docker Engine =&gt; features:{buildkit:false}</p>
+<p>3.docker 里是不能用127.0.0.1访问宿主机的数据库的，需要配置里配宿主机ip<br>
+root只能localhost访问，需要创建新用户, % 表示任意ip都能访问</p>
+<p>4.dokerfile 里的make build执行的就是makefile里的build命令，需要改指向的cmd路径</p>
+<p>5.可以用这个指令 docker run -it &lt;image:version&gt; bash<br>
+去排查docker运行时的问题</p>
+<p>6.casbin中间件 取不到req的mehod
+只有ctx和一个interface的req
+Request Method</p>
+<pre tabindex="0"><code>func(handler middleware.Handler) middleware.Handler {
+    return func(ctx context.Context, req interface{}) (interface{}, error) {
+        tr, _ := transport.FromServerContext(ctx)
+        htr := tr.(*http.Transport)//http是kratos transport里的子包
+        fmt.Println(htr.Request().Method, htr.Request().URL.Path)
+        return nil, nil
+    }
+},
+</code></pre></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -119,7 +149,7 @@
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://HimawariSunFlower.github.io/posts/read_gf_1/" data-title="gframe 框架源码阅读1"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://HimawariSunFlower.github.io/posts/read_gf_1/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://HimawariSunFlower.github.io/posts/read_gf_1/" data-title="gframe 框架源码阅读1" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://HimawariSunFlower.github.io/posts/read_gf_1/" data-title="gframe 框架源码阅读1"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://HimawariSunFlower.github.io/posts/read_gf_1/" data-title="gframe 框架源码阅读1"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="http://HimawariSunFlower.github.io/posts/read_gf_1/" data-title="gframe 框架源码阅读1" data-description=""><i class="fab fa-blogger fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="http://HimawariSunFlower.github.io/posts/read_gf_1/" data-title="gframe 框架源码阅读1"><i class="fab fa-evernote fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_2/" data-title="go-kratos 开发1"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_2/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_2/" data-title="go-kratos 开发1" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_2/" data-title="go-kratos 开发1"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_2/" data-title="go-kratos 开发1"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_2/" data-title="go-kratos 开发1" data-description=""><i class="fab fa-blogger fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_2/" data-title="go-kratos 开发1"><i class="fab fa-evernote fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -131,8 +161,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/read_kratos_1/" class="prev" rel="prev" title="go-kratos初体验"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>go-kratos初体验</a>
-            <a href="/posts/read_kratos_2/" class="next" rel="next" title="go-kratos 开发1">go-kratos 开发1<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/posts/read_gf_1/" class="prev" rel="prev" title="gframe 框架源码阅读1"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>gframe 框架源码阅读1</a>
+            <a href="/posts/mac_1/" class="next" rel="next" title="mac常用快捷键">mac常用快捷键<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="utterances" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
