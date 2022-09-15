@@ -63,4 +63,4 @@ func(handler middleware.Handler) middleware.Handler {
 
 7. goland新建项目，goget依赖成功但是一直飘红，外部库也没有实际添加
   解决方法，goland添加goproxy
-![这是图片](/public/img/2.png) 
+![这是图片](/img/2.png) 
