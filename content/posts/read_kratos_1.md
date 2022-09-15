@@ -9,10 +9,14 @@ draft: false
 1.wire生成出来的wire_gen.go，goland同包读取不到，飘红。(实际编译成功了)  
 :插件中卸载 go wire util 就好了
 
+<br/>
+
 2.proto文件，import "google/api/annotations.proto" 等应用飘红。  
 :在goland设置的protobuf里添加third_party,  
 belike:
 ![这是图片](/img/1.png)   
+
+<br/>
 
 3.项目结构
 ```

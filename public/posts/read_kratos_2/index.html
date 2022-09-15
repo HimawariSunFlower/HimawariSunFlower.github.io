@@ -5,15 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>go-kratos 开发1 - HimawariSunFlower&#39;s home</title><meta name="Description" content="后端技术博客"><meta property="og:title" content="go-kratos 开发1" />
-<meta property="og:description" content="1.错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误 { &#34;errors&#34;: { &#34;internal&#34;: [ &#34;error&#34; ] } } 无法显示具体信息，必须按规定的" />
+<meta property="og:description" content="模仿beershop的微服务demo运行及遇到的问题 错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://HimawariSunFlower.github.io/posts/read_kratos_2/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-05T15:08:57+08:00" />
-<meta property="article:modified_time" content="2022-09-05T15:08:57+08:00" /><meta property="og:site_name" content="HimawariSunFlower&#39;s home" />
+<meta property="article:modified_time" content="2022-09-13T14:07:01+08:00" /><meta property="og:site_name" content="HimawariSunFlower&#39;s home" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="go-kratos 开发1"/>
-<meta name="twitter:description" content="1.错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误 { &#34;errors&#34;: { &#34;internal&#34;: [ &#34;error&#34; ] } } 无法显示具体信息，必须按规定的"/>
+<meta name="twitter:description" content="模仿beershop的微服务demo运行及遇到的问题 错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误"/>
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -28,8 +28,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/HimawariSunFlower.github.io\/posts\/read_kratos_2\/"
-        },"genre": "posts","wordcount":  408 ,
-        "url": "http:\/\/HimawariSunFlower.github.io\/posts\/read_kratos_2\/","datePublished": "2022-09-05T15:08:57+08:00","dateModified": "2022-09-05T15:08:57+08:00","publisher": {
+        },"genre": "posts","wordcount":  483 ,
+        "url": "http:\/\/HimawariSunFlower.github.io\/posts\/read_kratos_2\/","datePublished": "2022-09-05T15:08:57+08:00","dateModified": "2022-09-13T14:07:01+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -102,7 +102,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">go-kratos 开发1</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://github.com/HimawariSunFlower" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>qiyuanh</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-05">2022-09-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 408 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-05">2022-09-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 483 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -110,7 +110,10 @@
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>1.错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误</p>
+            </div><div class="content" id="content"><p>模仿beershop的微服务demo运行及遇到的问题</p>
+<ol>
+<li>错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误</li>
+</ol>
 <pre tabindex="0"><code>{
   &#34;errors&#34;: {
     &#34;internal&#34;: [
@@ -121,17 +124,32 @@
 </code></pre><p>无法显示具体信息，必须按<a href="https://go-kratos.dev/docs/component/errors" target="_blank" rel="noopener noreffer ">规定的错误处理</a>，定义生成pb文件之后包装一下</p>
 <pre tabindex="0"><code>    v1.ErrorParamError(&#34;jwt token missing&#34;)
     v1.ErrorParamError(err.Error())
-</code></pre><p>2.尝试docker部署微服务，docker build 报错</p>
+</code></pre><!-- raw HTML omitted -->
+<ol start="2">
+<li>尝试docker部署微服务，docker build 报错</li>
+</ol>
 <pre tabindex="0"><code>failed to solve with frontend dockerfile.v0: failed to create LLB definition: unexpected status code [manifests stable-slim]: 403 Forbidden
 </code></pre><p>设置 docker Engine =&gt; features:{buildkit:false}</p>
-<p>3.docker 里是不能用127.0.0.1访问宿主机的数据库的，需要配置里配宿主机ip<br>
-root只能localhost访问，需要创建新用户, % 表示任意ip都能访问</p>
-<p>4.dokerfile 里的make build执行的就是makefile里的build命令，需要改指向的cmd路径</p>
-<p>5.可以用这个指令 docker run -it &lt;image:version&gt; bash<br>
-去排查docker运行时的问题</p>
-<p>6.casbin中间件 取不到req的mehod
+<!-- raw HTML omitted -->
+<ol start="3">
+<li>docker 里是不能用127.0.0.1访问宿主机的数据库的，需要配置里配宿主机ip<br>
+root只能localhost访问，需要创建新用户, % 表示任意ip都能访问</li>
+</ol>
+<!-- raw HTML omitted -->
+<ol start="4">
+<li>dokerfile 里的make build执行的就是makefile里的build命令，需要改指向的cmd路径</li>
+</ol>
+<!-- raw HTML omitted -->
+<ol start="5">
+<li>可以用这个指令 docker run -it &lt;image:version&gt; bash<br>
+去排查docker运行时的问题</li>
+</ol>
+<!-- raw HTML omitted -->
+<ol start="6">
+<li>casbin中间件 取不到req的mehod
 只有ctx和一个interface的req
-Request Method</p>
+Request Method</li>
+</ol>
 <pre tabindex="0"><code>func(handler middleware.Handler) middleware.Handler {
     return func(ctx context.Context, req interface{}) (interface{}, error) {
         tr, _ := transport.FromServerContext(ctx)
@@ -140,11 +158,24 @@ Request Method</p>
         return nil, nil
     }
 },
-</code></pre></div><div class="post-footer" id="post-footer">
+</code></pre><!-- raw HTML omitted -->
+<ol start="7">
+<li>goland新建项目，goget依赖成功但是一直飘红，外部库也没有实际添加
+解决方法，goland添加goproxy
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/img/2.png"
+        data-srcset="/img/2.png, /img/2.png 1.5x, /img/2.png 2x"
+        data-sizes="auto"
+        alt="/img/2.png"
+        title="这是图片" /></li>
+</ol>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-09-05</span>
+                <span>更新于 2022-09-13</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>

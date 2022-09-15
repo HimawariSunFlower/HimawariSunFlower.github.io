@@ -14,6 +14,8 @@ draft: false
     PageDOWN=Fn+下方向
 ```
 
+ <br/>
+
 终端  
 ```
     tab 完整的目录或文件名称
@@ -29,6 +31,8 @@ draft: false
     command+pagedown 下一页
 ```
 
+<br/>
+
 goland
 ```
     #部分是改建
@@ -43,4 +47,5 @@ goland
     shift+command+<- 选中到行首
     shift+command+-> 选中到行尾
     command+delete 行删除
+    option+command+l 格式化文件
 ```

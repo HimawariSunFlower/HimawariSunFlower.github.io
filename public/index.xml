@@ -4,9 +4,17 @@
         <link>http://HimawariSunFlower.github.io/</link>
         <description>后端技术博客</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>aleena35ed@gmail.com (qiyuanh)</managingEditor>
-            <webMaster>aleena35ed@gmail.com (qiyuanh)</webMaster><lastBuildDate>Tue, 13 Sep 2022 11:11:27 &#43;0800</lastBuildDate>
+            <webMaster>aleena35ed@gmail.com (qiyuanh)</webMaster><lastBuildDate>Tue, 13 Sep 2022 15:08:57 &#43;0800</lastBuildDate>
             <atom:link href="http://HimawariSunFlower.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>go-kratos 开发2</title>
+    <link>http://HimawariSunFlower.github.io/posts/read_kratos_3/</link>
+    <pubDate>Tue, 13 Sep 2022 15:08:57 &#43;0800</pubDate>
+    <author>qiyuanh</author>
+    <guid>http://HimawariSunFlower.github.io/posts/read_kratos_3/</guid>
+    <description><![CDATA[微服务必须的功能及第三方库 服务发现 consul 基于name和id来区分不同注册 如果name或id相同，会互相覆盖 链路追踪 jaeger kratos的中间件通过[o]]></description>
+</item>
+<item>
     <title>mac常用快捷键</title>
     <link>http://HimawariSunFlower.github.io/posts/mac_1/</link>
     <pubDate>Tue, 13 Sep 2022 11:11:27 &#43;0800</pubDate>
@@ -20,7 +28,7 @@
     <pubDate>Mon, 05 Sep 2022 15:08:57 &#43;0800</pubDate>
     <author>qiyuanh</author>
     <guid>http://HimawariSunFlower.github.io/posts/read_kratos_2/</guid>
-    <description><![CDATA[1.错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误 { &#34;errors&#34;: { &#34;internal&#34;: [ &#34;error&#34; ] } } 无法显示具体信息，必须按规定的]]></description>
+    <description><![CDATA[模仿beershop的微服务demo运行及遇到的问题 错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误]]></description>
 </item>
 <item>
     <title>gframe 框架源码阅读1</title>
