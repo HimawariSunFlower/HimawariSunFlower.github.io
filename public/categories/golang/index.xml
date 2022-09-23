@@ -1,16 +1,23 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>golang - 分类 - HimawariSunFlower&#39;s home</title>
-        <link>http://HimawariSunFlower.github.io/categories/golang/</link>
-        <description>golang - 分类 - HimawariSunFlower&#39;s home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>aleena35ed@gmail.com (qiyuanh)</managingEditor>
-            <webMaster>aleena35ed@gmail.com (qiyuanh)</webMaster><lastBuildDate>Fri, 23 Sep 2022 14:11:27 &#43;0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/golang/" rel="self" type="application/rss+xml" /><item>
-    <title>go1.16 docker build遇到的问题</title>
-    <link>http://HimawariSunFlower.github.io/posts/go_sum/</link>
-    <pubDate>Fri, 23 Sep 2022 14:11:27 &#43;0800</pubDate>
-    <author>qiyuanh</author>
-    <guid>http://HimawariSunFlower.github.io/posts/go_sum/</guid>
-    <description><![CDATA[在我本机能运行的Dockerfile，在同事机器上build步骤会失败 Dockerfile: FROM golang:1.16 AS builder ARG APP_RELATIVE_PATH COPY . /src WORKDIR /src/app/${APP_RELATIVE_PATH} RUN GOPROXY=https://goproxy.cn make build FROM debian:stable-slim ARG APP_RELATIVE_PATH RUN apt-get update &amp;&amp; apt-get install -y --no-install-recommends \ ca-certificates \ netbase \ &amp;&amp; rm]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on johndoe</title>
+    <link>http://HimawariSunFlower.github.io/categories/golang/</link>
+    <description>Recent content in golang on johndoe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 23 Sep 2022 14:11:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go1.16 docker build遇到的问题</title>
+      <link>http://HimawariSunFlower.github.io/posts/go_sum/</link>
+      <pubDate>Fri, 23 Sep 2022 14:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/go_sum/</guid>
+      <description>在我本机能运行的Dockerfile，在同事机器上build步骤会失败
+Dockerfile:
+FROM golang:1.16 AS builder ARG APP_RELATIVE_PATH COPY . /src WORKDIR /src/app/${APP_RELATIVE_PATH} RUN GOPROXY=https://goproxy.cn make build FROM debian:stable-slim ARG APP_RELATIVE_PATH RUN apt-get update &amp;amp;&amp;amp; apt-get install -y --no-install-recommends \ ca-certificates \ netbase \ &amp;amp;&amp;amp; rm -rf /var/lib/apt/lists/ \ &amp;amp;&amp;amp; apt-get autoremove -y &amp;amp;&amp;amp; apt-get autoclean -y COPY --from=builder /src/app/${APP_RELATIVE_PATH}/bin /app WORKDIR /app EXPOSE 8000 EXPOSE 9000 VOLUME /data/conf CMD [&amp;#34;./server&amp;#34;, &amp;#34;-conf&amp;#34;, &amp;#34;/data/conf&amp;#34;] Makefile:
+.PHONY: build # build build: mkdir -p bin/ &amp;amp;&amp;amp; go build -ldflags &amp;#34;-X main.</description>
+    </item>
+    
+  </channel>
 </rss>

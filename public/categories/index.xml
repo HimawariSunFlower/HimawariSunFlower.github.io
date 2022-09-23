@@ -1,64 +1,74 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Categories - 分类 - HimawariSunFlower&#39;s home</title>
-        <link>http://HimawariSunFlower.github.io/categories/</link>
-        <description>Categories - 分类 - HimawariSunFlower&#39;s home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>aleena35ed@gmail.com (qiyuanh)</managingEditor>
-            <webMaster>aleena35ed@gmail.com (qiyuanh)</webMaster><lastBuildDate>Fri, 23 Sep 2022 14:11:27 &#43;0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/" rel="self" type="application/rss+xml" /><item>
-    <title>docker</title>
-    <link>http://HimawariSunFlower.github.io/categories/docker/</link>
-    <pubDate>Fri, 23 Sep 2022 14:11:27 &#43;0800</pubDate>
-    <author>qiyuanh</author>
-    <guid>http://HimawariSunFlower.github.io/categories/docker/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>golang</title>
-    <link>http://HimawariSunFlower.github.io/categories/golang/</link>
-    <pubDate>Fri, 23 Sep 2022 14:11:27 &#43;0800</pubDate>
-    <author>qiyuanh</author>
-    <guid>http://HimawariSunFlower.github.io/categories/golang/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>go-kratos</title>
-    <link>http://HimawariSunFlower.github.io/categories/go-kratos/</link>
-    <pubDate>Mon, 19 Sep 2022 11:11:27 &#43;0800</pubDate>
-    <author>qiyuanh</author>
-    <guid>http://HimawariSunFlower.github.io/categories/go-kratos/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>gorm</title>
-    <link>http://HimawariSunFlower.github.io/categories/gorm/</link>
-    <pubDate>Mon, 19 Sep 2022 11:11:27 &#43;0800</pubDate>
-    <author>qiyuanh</author>
-    <guid>http://HimawariSunFlower.github.io/categories/gorm/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>mac</title>
-    <link>http://HimawariSunFlower.github.io/categories/mac/</link>
-    <pubDate>Tue, 13 Sep 2022 11:11:27 &#43;0800</pubDate>
-    <author>qiyuanh</author>
-    <guid>http://HimawariSunFlower.github.io/categories/mac/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>gframe</title>
-    <link>http://HimawariSunFlower.github.io/categories/gframe/</link>
-    <pubDate>Tue, 30 Aug 2022 16:21:14 &#43;0800</pubDate>
-    <author>qiyuanh</author>
-    <guid>http://HimawariSunFlower.github.io/categories/gframe/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>git</title>
-    <link>http://HimawariSunFlower.github.io/categories/git/</link>
-    <pubDate>Tue, 30 Aug 2022 11:11:27 &#43;0800</pubDate>
-    <author>qiyuanh</author>
-    <guid>http://HimawariSunFlower.github.io/categories/git/</guid>
-    <description><![CDATA[]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on johndoe</title>
+    <link>http://HimawariSunFlower.github.io/categories/</link>
+    <description>Recent content in Categories on johndoe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 23 Sep 2022 14:11:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker</title>
+      <link>http://HimawariSunFlower.github.io/categories/docker/</link>
+      <pubDate>Fri, 23 Sep 2022 14:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>http://HimawariSunFlower.github.io/categories/golang/</link>
+      <pubDate>Fri, 23 Sep 2022 14:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go-kratos</title>
+      <link>http://HimawariSunFlower.github.io/categories/go-kratos/</link>
+      <pubDate>Mon, 19 Sep 2022 11:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/categories/go-kratos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gorm</title>
+      <link>http://HimawariSunFlower.github.io/categories/gorm/</link>
+      <pubDate>Mon, 19 Sep 2022 11:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/categories/gorm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>http://HimawariSunFlower.github.io/categories/mac/</link>
+      <pubDate>Tue, 13 Sep 2022 11:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/categories/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gframe</title>
+      <link>http://HimawariSunFlower.github.io/categories/gframe/</link>
+      <pubDate>Tue, 30 Aug 2022 16:21:14 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/categories/gframe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>http://HimawariSunFlower.github.io/categories/git/</link>
+      <pubDate>Tue, 30 Aug 2022 11:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/categories/git/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
 </rss>

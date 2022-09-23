@@ -1,136 +1,192 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <title>go-kratos 模仿beershop的微服务demo运行及遇到的问题 - HimawariSunFlower&#39;s home</title><meta name="Description" content="后端技术博客"><meta property="og:title" content="go-kratos 模仿beershop的微服务demo运行及遇到的问题" />
-<meta property="og:description" content="错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误 { &#34;errors&#34;: { &#34;internal&#34;: [ &#34;error&#34; ] } } 无法显示具体信息，必须按规定的错误" />
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="color-scheme" content="light dark">
+
+    
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests; block-all-mixed-content; default-src 'self'; child-src 'self'; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net/; form-action 'self'; frame-src 'self'; img-src 'self'; object-src 'none'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://cdn.jsdelivr.net/; script-src 'self' 'unsafe-inline' https://www.google-analytics.com https://cdn.jsdelivr.net/; prefetch-src 'self'; connect-src 'self' https://www.google-analytics.com;">
+
+    
+
+    <meta name="author" content="qiyuanh">
+    <meta name="description" content="错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误 { &#34;errors&#34;: { &#34;internal&#34;: [ &#34;error&#34; ] } } 无法显示具体信息，必须按规定的错误处理，定义生成pb文件之后包装一下
+v1.ErrorParamError(&#34;jwt token missing&#34;) v1.ErrorParamError(err.Error()) 尝试docker部署微服务，docker build 报错 failed to solve with frontend dockerfile.v0: failed to create LLB definition: unexpected status code [manifests stable-slim]: 403 Forbidden 设置 docker Engine =&gt; features:{buildkit:false}
+docker 里是不能用127.0.0.1访问宿主机的数据库的，需要配置里配宿主机ip
+root只能localhost访问，需要创建新用户, % 表示任意ip都能访问 dokerfile 里的make build执行的就是makefile里的build命令，需要改指向的cmd路径 可以用这个指令 docker run -it &lt;image:version&gt; bash
+去排查docker运行时的问题 casbin中间件 取不到req的mehod 只有ctx和一个interface的req Request Method func(handler middleware.Handler) middleware.Handler { return func(ctx context.Context, req interface{}) (interface{}, error) { tr, _ := transport.">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="go-kratos 模仿beershop的微服务demo运行及遇到的问题"/>
+<meta name="twitter:description" content="错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误 { &#34;errors&#34;: { &#34;internal&#34;: [ &#34;error&#34; ] } } 无法显示具体信息，必须按规定的错误处理，定义生成pb文件之后包装一下
+v1.ErrorParamError(&#34;jwt token missing&#34;) v1.ErrorParamError(err.Error()) 尝试docker部署微服务，docker build 报错 failed to solve with frontend dockerfile.v0: failed to create LLB definition: unexpected status code [manifests stable-slim]: 403 Forbidden 设置 docker Engine =&gt; features:{buildkit:false}
+docker 里是不能用127.0.0.1访问宿主机的数据库的，需要配置里配宿主机ip
+root只能localhost访问，需要创建新用户, % 表示任意ip都能访问 dokerfile 里的make build执行的就是makefile里的build命令，需要改指向的cmd路径 可以用这个指令 docker run -it &lt;image:version&gt; bash
+去排查docker运行时的问题 casbin中间件 取不到req的mehod 只有ctx和一个interface的req Request Method func(handler middleware.Handler) middleware.Handler { return func(ctx context.Context, req interface{}) (interface{}, error) { tr, _ := transport."/>
+
+    <meta property="og:title" content="go-kratos 模仿beershop的微服务demo运行及遇到的问题" />
+<meta property="og:description" content="错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误 { &#34;errors&#34;: { &#34;internal&#34;: [ &#34;error&#34; ] } } 无法显示具体信息，必须按规定的错误处理，定义生成pb文件之后包装一下
+v1.ErrorParamError(&#34;jwt token missing&#34;) v1.ErrorParamError(err.Error()) 尝试docker部署微服务，docker build 报错 failed to solve with frontend dockerfile.v0: failed to create LLB definition: unexpected status code [manifests stable-slim]: 403 Forbidden 设置 docker Engine =&gt; features:{buildkit:false}
+docker 里是不能用127.0.0.1访问宿主机的数据库的，需要配置里配宿主机ip
+root只能localhost访问，需要创建新用户, % 表示任意ip都能访问 dokerfile 里的make build执行的就是makefile里的build命令，需要改指向的cmd路径 可以用这个指令 docker run -it &lt;image:version&gt; bash
+去排查docker运行时的问题 casbin中间件 取不到req的mehod 只有ctx和一个interface的req Request Method func(handler middleware.Handler) middleware.Handler { return func(ctx context.Context, req interface{}) (interface{}, error) { tr, _ := transport." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://HimawariSunFlower.github.io/posts/read_kratos_2/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-05T15:08:57+08:00" />
-<meta property="article:modified_time" content="2022-09-23T14:29:01+08:00" /><meta property="og:site_name" content="HimawariSunFlower&#39;s home" />
+<meta property="article:modified_time" content="2022-09-05T15:08:57+08:00" />
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="go-kratos 模仿beershop的微服务demo运行及遇到的问题"/>
-<meta name="twitter:description" content="错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误 { &#34;errors&#34;: { &#34;internal&#34;: [ &#34;error&#34; ] } } 无法显示具体信息，必须按规定的错误"/>
-<meta name="application-name" content="My cool site">
-<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://HimawariSunFlower.github.io/posts/read_kratos_2/" /><link rel="prev" href="http://HimawariSunFlower.github.io/posts/read_gf_1/" /><link rel="next" href="http://HimawariSunFlower.github.io/posts/mac_1/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "go-kratos 模仿beershop的微服务demo运行及遇到的问题",
-        "inLanguage": "zh-CN",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "http:\/\/HimawariSunFlower.github.io\/posts\/read_kratos_2\/"
-        },"genre": "posts","wordcount":  457 ,
-        "url": "http:\/\/HimawariSunFlower.github.io\/posts\/read_kratos_2\/","datePublished": "2022-09-05T15:08:57+08:00","dateModified": "2022-09-23T14:29:01+08:00","publisher": {
-            "@type": "Organization",
-            "name": ""},"author": {
-                "@type": "Person",
-                "name": "qiyuanh"
-            },"description": ""
-    }
-    </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="HimawariSunFlower&#39;s home">HimawariSunFlower&#39;s home</a>
+
+    <title>
+  go-kratos 模仿beershop的微服务demo运行及遇到的问题 · johndoe
+</title>
+
+    
+      <link rel="canonical" href="http://HimawariSunFlower.github.io/posts/read_kratos_2/">
+    
+
+    <link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+    
+      
+      
+      <link rel="stylesheet" href="/css/coder.min.728f45c9eaff821acb9cccdb60c81cf16be81bd890ee22cc5b5f4dbf276a082f.css" integrity="sha256-co9Fyer/ghrLnMzbYMgc8WvoG9iQ7iLMW19NvydqCC8=" crossorigin="anonymous" media="screen" />
+    
+
+    
+
+    
+      
+        
+        
+        <link rel="stylesheet" href="/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css" integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin="anonymous" media="screen" />
+      
+    
+
+    
+
+    
+
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+    <meta name="generator" content="Hugo 0.101.0" />
+  </head>
+
+  
+  
+    
+  
+  <body class="preload-transitions colorscheme-auto">
+    
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      johndoe
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://HimawariSunFlower.github.io/posts/read_kratos_2/">
+              go-kratos 模仿beershop的微服务demo运行及遇到的问题
+            </a>
+          </h1>
         </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
-                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
-                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
-                        </span>
-                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a>
-            </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2022-09-05T15:08:57&#43;08:00'>
+                September 5, 2022
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              One-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/categories/go-kratos/">go-kratos</a></div>
+
+          
         </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="HimawariSunFlower&#39;s home">HimawariSunFlower&#39;s home</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><div class="search-wrapper">
-                    <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
-                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
-                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
-                        </a>
-                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
-                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
-                        </span>
-                    </div>
-                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
-                        取消
-                    </a>
-                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
-                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-            </a></div>
-    </div>
-</header><div class="search-dropdown desktop">
-        <div id="search-dropdown-desktop"></div>
-    </div>
-    <div class="search-dropdown mobile">
-        <div id="search-dropdown-mobile"></div>
-    </div><main class="main">
-                <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">目录</h2>
-            <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">go-kratos 模仿beershop的微服务demo运行及遇到的问题</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/HimawariSunFlower" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>qiyuanh</a>
-</span>&nbsp;<span class="post-category">收录于 <a href="/categories/go-kratos/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>go-kratos</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-05">2022-09-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 457 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  data-kept="">
-                <div class="details-summary toc-title">
-                    <span>目录</span>
-                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><ol>
+      </header>
+
+      <div>
+        
+        <ol>
 <li>错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误</li>
 </ol>
-<pre tabindex="0"><code>{
-  &#34;errors&#34;: {
-    &#34;internal&#34;: [
-      &#34;error&#34;
-    ]
-  }
-}
-</code></pre><p>无法显示具体信息，必须按<a href="https://go-kratos.dev/docs/component/errors" target="_blank" rel="noopener noreffer">规定的错误处理</a>
-，定义生成pb文件之后包装一下</p>
-<pre tabindex="0"><code>    v1.ErrorParamError(&#34;jwt token missing&#34;)
-    v1.ErrorParamError(err.Error())
-</code></pre><!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  &#34;errors&#34;: {
+</span></span><span style="display:flex;"><span>    &#34;internal&#34;: [
+</span></span><span style="display:flex;"><span>      &#34;error&#34;
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>无法显示具体信息，必须按<a href="https://go-kratos.dev/docs/component/errors">规定的错误处理</a>，定义生成pb文件之后包装一下</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>    v1.ErrorParamError(&#34;jwt token missing&#34;)
+</span></span><span style="display:flex;"><span>    v1.ErrorParamError(err.Error())
+</span></span></code></pre></div><!-- raw HTML omitted -->
 <ol start="2">
 <li>尝试docker部署微服务，docker build 报错</li>
 </ol>
-<pre tabindex="0"><code>failed to solve with frontend dockerfile.v0: failed to create LLB definition:   
-unexpected status code [manifests stable-slim]: 403 Forbidden
-</code></pre><p>设置 docker Engine =&gt; features:{buildkit:false}</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>failed to solve with frontend dockerfile.v0: failed to create LLB definition:   
+</span></span><span style="display:flex;"><span>unexpected status code [manifests stable-slim]: 403 Forbidden
+</span></span></code></pre></div><p>设置 docker Engine =&gt; features:{buildkit:false}</p>
 <!-- raw HTML omitted -->
 <ol start="3">
 <li>docker 里是不能用127.0.0.1访问宿主机的数据库的，需要配置里配宿主机ip<br>
@@ -151,64 +207,80 @@ root只能localhost访问，需要创建新用户, % 表示任意ip都能访问<
 只有ctx和一个interface的req
 Request Method</li>
 </ol>
-<pre tabindex="0"><code>func(handler middleware.Handler) middleware.Handler {
-    return func(ctx context.Context, req interface{}) (interface{}, error) {
-        tr, _ := transport.FromServerContext(ctx)
-        htr := tr.(*http.Transport)//http是kratos transport里的子包
-        fmt.Println(htr.Request().Method, htr.Request().URL.Path)
-        return nil, nil
-    }
-},
-</code></pre><!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>func(handler middleware.Handler) middleware.Handler {
+</span></span><span style="display:flex;"><span>    return func(ctx context.Context, req interface{}) (interface{}, error) {
+</span></span><span style="display:flex;"><span>        tr, _ := transport.FromServerContext(ctx)
+</span></span><span style="display:flex;"><span>        htr := tr.(*http.Transport)//http是kratos transport里的子包
+</span></span><span style="display:flex;"><span>        fmt.Println(htr.Request().Method, htr.Request().URL.Path)
+</span></span><span style="display:flex;"><span>        return nil, nil
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>},
+</span></span></code></pre></div><!-- raw HTML omitted -->
 <ol start="7">
 <li>goland新建项目，goget依赖成功但是一直飘红，外部库也没有实际添加
 解决方法，goland添加goproxy
-<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/img/2.png"
-        data-srcset="/img/2.png, /img/2.png 1.5x, /img/2.png 2x"
-        data-sizes="auto"
-        alt="/img/2.png"
-        title="这是图片" /></li>
+<img src="/img/2.png" alt="这是图片"></li>
 </ol>
-</div><div class="post-footer" id="post-footer">
-    <div class="post-info">
-        <div class="post-info-line">
-            <div class="post-info-mod">
-                <span>更新于 2022-09-23</span>
-            </div></div>
-        <div class="post-info-line">
-            <div class="post-info-md"></div>
-            <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_2/" data-title="go-kratos 模仿beershop的微服务demo运行及遇到的问题"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_2/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_2/" data-title="go-kratos 模仿beershop的微服务demo运行及遇到的问题" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_2/" data-title="go-kratos 模仿beershop的微服务demo运行及遇到的问题"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_2/" data-title="go-kratos 模仿beershop的微服务demo运行及遇到的问题"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_2/" data-title="go-kratos 模仿beershop的微服务demo运行及遇到的问题" data-description=""><i class="fab fa-blogger fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_2/" data-title="go-kratos 模仿beershop的微服务demo运行及遇到的问题"><i class="fab fa-evernote fa-fw" aria-hidden="true"></i></a></span>
-            </div>
-        </div>
-    </div>
 
-    <div class="post-info-more">
-        <section class="post-tags"></section>
-        <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
-        </section>
-    </div>
+      </div>
 
-    <div class="post-nav"><a href="/posts/read_gf_1/" class="prev" rel="prev" title="gframe 框架源码阅读1"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>gframe 框架源码阅读1</a>
-            <a href="/posts/mac_1/" class="next" rel="next" title="mac常用快捷键">mac常用快捷键<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
-</div>
-<div id="comments"><div id="utterances" class="comment"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
-            </noscript></div></article></div>
-            </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/HimawariSunFlower" target="_blank">qiyuanh</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
-        </div>
-    </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
-                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
-                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
-            </a>
-        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"HimawariSunFlower/HimawariSunFlower.github.io"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"","algoliaIndex":"","algoliaSearchKey":"","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+      <footer>
+        
+
+
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+      </div>
+
+      
+  <footer class="footer">
+    <section class="container">
+      
+      
+        ©
+        
+        2022
+         qiyuanh 
+      
+      
+         · 
+        Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      
+      
+    </section>
+  </footer>
+
+
+    </main>
+
+    
+      
+      <script src="/js/coder.min.cb0c595e02234420f3ad3886bf4a9bd2874d0e1e78e090138a9ef158b35aaf17.js" integrity="sha256-ywxZXgIjRCDzrTiGv0qb0odNDh544JATip7xWLNarxc="></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+  </body>
+
 </html>

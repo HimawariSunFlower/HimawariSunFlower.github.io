@@ -1,16 +1,20 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>gorm - 分类 - HimawariSunFlower&#39;s home</title>
-        <link>http://HimawariSunFlower.github.io/categories/gorm/</link>
-        <description>gorm - 分类 - HimawariSunFlower&#39;s home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>aleena35ed@gmail.com (qiyuanh)</managingEditor>
-            <webMaster>aleena35ed@gmail.com (qiyuanh)</webMaster><lastBuildDate>Mon, 19 Sep 2022 11:11:27 &#43;0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/gorm/" rel="self" type="application/rss+xml" /><item>
-    <title>gorm 遇到的问题</title>
-    <link>http://HimawariSunFlower.github.io/posts/gorm_1/</link>
-    <pubDate>Mon, 19 Sep 2022 11:11:27 &#43;0800</pubDate>
-    <author>qiyuanh</author>
-    <guid>http://HimawariSunFlower.github.io/posts/gorm_1/</guid>
-    <description><![CDATA[updates(&amp;struct{}),值为0不会跟新，需要updates(map)或者save()或者update()]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gorm on johndoe</title>
+    <link>http://HimawariSunFlower.github.io/categories/gorm/</link>
+    <description>Recent content in gorm on johndoe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 19 Sep 2022 11:11:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/gorm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gorm 遇到的问题</title>
+      <link>http://HimawariSunFlower.github.io/posts/gorm_1/</link>
+      <pubDate>Mon, 19 Sep 2022 11:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/gorm_1/</guid>
+      <description> updates(&amp;amp;struct{}),值为0不会跟新，需要updates(map)或者save()或者update() </description>
+    </item>
+    
+  </channel>
 </rss>

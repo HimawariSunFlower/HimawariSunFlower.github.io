@@ -1,264 +1,123 @@
 baseURL = 'http://HimawariSunFlower.github.io/'
-
-title = "HimawariSunFlower's home" 
-defaultContentLanguage = "zh-cn"
-# 网站语言, 仅在这里 CN大写
-languageCode = "zh-CN"
-# 是否包括中日韩文字
-hasCJKLanguage = true
-# 主题
-theme = "LoveIt"
-# default amount of posts in each pages
-# 默认每页列表显示的文章数目
-paginate = 12
-# google analytics code [UA-XXXXXXXX-X]
-# 谷歌分析代号 [UA-XXXXXXXX-X]
-googleAnalytics = ""
-# copyright description used only for seo schema
-# 版权描述，仅仅用于 SEO
-copyright = ""
-
-# whether to use robots.txt
-# 是否使用 robots.txt
-enableRobotsTXT = true
-# whether to use git commit log
-# 是否使用 git 信息
-enableGitInfo = true
-# whether to use emoji code
-# 是否使用 emoji 代码
+title = "HimawariSunFlower's home"
+theme = "hugo-coder"
+languageCode = "en"
+defaultContentLanguage = "en"
+paginate = 20
+pygmentsStyle = "bw"
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
 enableEmoji = true
-# images = ["/resources/starsky.webp"]
-[languages]
-  [languages.zh-cn]
-    weight = 2
-    title = "HimawariSunFlower's home"
-    # 网站语言, 仅在这里 CN 大写
-    languageCode = "zh-CN"
-    languageName = "简体中文"
-    # 是否包括中日韩文字
-    hasCJKLanguage = true
-    [[languages.zh-cn.menu.main]]
-      identifier = "posts"
-      pre = ""
-      post = ""
-      name = "文章"
-      url = "/posts/"
-      title = ""
-      weight = 1
-    # [[languages.zh-cn.menu.main]]
-    #   identifier = "tags"
-    #   pre = ""
-    #   post = ""
-    #   name = "标签"
-    #   url = "/tags/"
-    #   title = ""
-    #   weight = 2
-    [[languages.zh-cn.menu.main]]
-      identifier = "categories"
-      pre = ""
-      post = ""
-      name = "分类"
-      url = "/categories/"
-      title = ""
-      weight = 3
-  [languages.zh-cn.params]
-   description = "后端技术博客"
-   keywords = ["go","kubernetes"]
+# Enable Disqus comments
+# disqusShortname = "yourdiscussshortname"
+
 [params]
-  # LoveIt 主题版本
-  version = "0.2.X"
-  [params.header]
-    [params.header.title]
-     name = "HimawariSunFlower's home"
-  [params.footer]
-    enable = true
-    # LoveIt 新增 | 0.2.0 自定义内容 (支持 HTML 格式)
-    custom = ''
-    # LoveIt 新增 | 0.2.0 是否显示 Hugo 和主题信息
-    hugo = true
-    # LoveIt 新增 | 0.2.0 是否显示版权信息
-    copyright = true
-    # LoveIt 新增 | 0.2.0 是否显示作者
-    author = true
-    # 网站创立年份
-    since = 2022
-    # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
-    icp = ""
-    # 许可协议信息 (支持 HTML 格式)
-    license = '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
-  [params.search]
-    enable = true
-    type = "algolia"
-    contentLength = 4000
-    placeholder = ""
-    maxResultLength = 10
-    snippetLength = 50
-    highlightTag = "em"
-    absoluteURL = false
-  [params.search.algolia]
- [params.section]
-    # section 页面每页显示文章数量
-    paginate = 20
-    # 日期格式 (月和日)
-    dateFormat = "01-02"
-  [params.list]
-    # list 页面每页显示文章数量
-    paginate = 20
-    # 日期格式 (月和日)
-    dateFormat = "01-02"
-  [params.home]
-   [params.home.profile]
-      enable = true
-      subtitle = "Cast a cold eye on life, on death. Horseman, pass by."
-      # 是否为副标题显示打字机动画
-      typeit = true
-      # 是否显示社交账号
-      social = true
+author = "qiyuanh"
+# license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
+description = "HimawariSunFlower's home"
+keywords = "blog,developer,personal"
+info = ["Cast a cold eye on life, on death. Horseman, pass by."]
+avatarURL = "img/avatar.jpeg"
+#gravatar = "john.doe@example.com"
+dateFormat = "January 2, 2006"
+since = 2022
+# Git Commit in Footer, uncomment the line below to enable it
+#commit = "https://github.com/luizdepra/hugo-coder/tree/"
+# Right To Left, shift content direction for languagues such as Arabic
+rtl = false
+# Specify light/dark colorscheme
+# Supported values:
+# "auto" (use preference set by browser)
+# "dark" (dark background, light foreground)
+# "light" (light background, dark foreground) (default)
+colorScheme = "auto"
+# Hide the toggle button, along with the associated vertical divider
+hideColorSchemeToggle = false
+# Series see also post count
+maxSeeAlsoItems = 5
+# Custom CSS
+customCSS = []
+# Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
+customSCSS = []
+# Custom JS
+customJS = []
 
- [params.social]
-  Github = "HimawariSunFlower"
- 
- [params.page]
-    # whether to hide a page from home page
-    # 是否在主页隐藏一篇文章
-    hiddenFromHomePage = false
-    # whether to hide a page from search results
-    # 是否在搜索结果中隐藏一篇文章
-    hiddenFromSearch = false
-    # whether to enable twemoji
-    # 是否使用 twemoji
-    twemoji = false
-    # whether to enable lightgallery
-    # 是否使用 lightgallery
-    lightgallery = false
-    # whether to enable the ruby extended syntax
-    # 是否使用 ruby 扩展语法
-    ruby = true
-    # whether to enable the fraction extended syntax
-    # 是否使用 fraction 扩展语法
-    fraction = true
-    # whether to enable the fontawesome extended syntax
-    # 是否使用 fontawesome 扩展语法
-    fontawesome = true
-    # whether to show link to Raw Markdown content of the content
-    # 是否显示原始 Markdown 文档内容的链接
-    linkToMarkdown = true
-    # whether to show the full text content in RSS
-    # 是否在 RSS 中显示全文内容
-    rssFullText = false
-    # Table of the contents config
-    # 目录配置
-    [params.page.toc]
-      # whether to enable the table of the contents
-      # 是否使用目录
-      enable = true
-      # whether to keep the static table of the contents in front of the post
-      # 是否保持使用文章前面的静态目录
-      keepStatic = false
-      # whether to make the table of the contents in the sidebar automatically collapsed
-      # 是否使侧边目录自动折叠展开
-      auto = true
-   [params.page.code]
-      # whether to show the copy button of the code block
-      # 是否显示代码块的复制按钮
-      copy = true
-      # the maximum number of lines of displayed code by default
-      # 默认展开显示的代码行数
-      maxShownLines = 50
-   [params.page.math]
-      enable = true
-      # 默认块定界符是 $$ ... $$ 和 \\[ ... \\]
-      blockLeftDelimiter = ""
-      blockRightDelimiter = ""
-      # 默认行内定界符是 $ ... $ 和 \\( ... \\)
-      inlineLeftDelimiter = ""
-      inlineRightDelimiter = ""
-      # KaTeX 插件 copy_tex
-      copyTex = true
-      # KaTeX 插件 mhchem
-      mhchem = true
-    [params.page.share]
-      enable = true
-      Twitter = true
-      Facebook = true
-      Linkedin = false
-      Whatsapp = true
-      Pinterest = false
-      Tumblr = false
-      HackerNews = false
-      Reddit = false
-      VK = false
-      Buffer = false
-      Xing = false
-      Line = true
-      Instapaper = false
-      Pocket = false
-      Digg = false
-      Stumbleupon = false
-      Flipboard = false
-      Weibo = true
-      Renren = false
-      Myspace = true
-      Blogger = true
-      Baidu = false
-      Odnoklassniki = false
-      Evernote = true
-      Skype = false
-      Trello = false
-      Mix = false
-   [params.page.comment]
-      enable = true
-      [params.page.comment.utterances]
-        enable = true
-        # owner/repo
-        repo = "HimawariSunFlower/HimawariSunFlower.github.io"
-        issueTerm = "pathname"
-        label = ""
-        lightTheme = "github-light"
-        darkTheme = "github-dark"
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-    pre = ""
-    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-    post = ""
-    name = "文章"
-    url = "/posts/"
-    # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
-    title = ""
-    weight = 1
-  # [[menu.main]]
-  #   identifier = "tags"
-  #   pre = ""
-  #   post = ""
-  #   name = "标签"
-  #   url = "/tags/"
-  #   title = ""
-  #   weight = 2
-  [[menu.main]]
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "分类"
-    url = "/categories/"
-    title = ""
-    weight = 3
+# If you want to use fathom(https://usefathom.com) for analytics, add this section
+# [params.fathomAnalytics]
+# siteID = "ABCDE"
+# serverURL = "analytics.example.com" # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
 
-# Hugo 解析文档的配置
-[markup]
-  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
-  [markup.highlight]
-    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
-    noClasses = false
-[sitemap]
-  changefreq = "weekly"
-  filename = "sitemap.xml"
-  priority = 0.5
-[author]
-  name = "qiyuanh"
-  email = "aleena35ed@gmail.com"
-  link = "https://github.com/HimawariSunFlower"
+# If you want to use plausible(https://plausible.io) for analytics, add this section
+# [params.plausibleAnalytics]
+# domain = "example.com"
+# serverURL = "analytics.example.com" # Default value is plausible.io, overwrite this if you are self-hosting or using a custom domain
 
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
+# If you want to use goatcounter(https://goatcounter.com) for analytics, add this section
+# [params.goatCounter]
+# code = "code"
+
+# If you want to use Cloudflare Web Analytics(https://cloudflare.com) for analytics, add this section
+# [params.cloudflare]
+# token = "token"
+
+# If you want to use Matomo(https://matomo.org) for analytics, add this section
+# [params.matomo]
+# siteID = "ABCDE" # Default value is "1", overwrite this if you are cloud-hosting
+# serverURL = "analytics.example.com" # For cloud-hosting, use provided URL, e.g. example.matomo.cloud
+
+# If you want to use Google Tag Manager(https://analytics.google.com/) for analytics, add this section
+# [params.googleTagManager]
+# id = "gid"
+
+# If you want to use Application Insights(https://azure.com/) for analytics, add this section
+# [params.applicationInsights]
+# connectionString = "connectionString"
+
+# If you want to implement a Content-Security-Policy, add this section
+[params.csp]
+childsrc = ["'self'"]
+fontsrc = ["'self'", "https://fonts.gstatic.com", "https://cdn.jsdelivr.net/"]
+formaction = ["'self'"]
+framesrc = ["'self'"]
+imgsrc = ["'self'"]
+objectsrc = ["'none'"]
+stylesrc = [
+  "'self'",
+  "'unsafe-inline'",
+  "https://fonts.googleapis.com/",
+  "https://cdn.jsdelivr.net/"
+]
+scriptsrc = [
+  "'self'",
+  "'unsafe-inline'",
+  "https://www.google-analytics.com",
+  "https://cdn.jsdelivr.net/"
+]
+prefetchsrc = ["'self'"]
+# connect-src directive – defines valid targets for to XMLHttpRequest (AJAX), WebSockets or EventSource
+connectsrc = ["'self'", "https://www.google-analytics.com"]
+
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+author = "authors"
+
+[[params.social]]
+name = "Github"
+icon = "fa fa-2x fa-github"
+weight = 1
+url = "https://github.com/HimawariSunFlower"
+
+[languages.en]
+languageName = ":uk:"
+
+[[languages.en.menu.main]]
+name = "Blog"
+weight = 2
+url = "posts/"
+
+[[languages.en.menu.main]]
+name = "categories"
+weight = 1
+url = "categories/"

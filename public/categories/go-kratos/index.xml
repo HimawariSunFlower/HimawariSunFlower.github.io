@@ -1,40 +1,62 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>go-kratos - 分类 - HimawariSunFlower&#39;s home</title>
-        <link>http://HimawariSunFlower.github.io/categories/go-kratos/</link>
-        <description>go-kratos - 分类 - HimawariSunFlower&#39;s home</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>aleena35ed@gmail.com (qiyuanh)</managingEditor>
-            <webMaster>aleena35ed@gmail.com (qiyuanh)</webMaster><lastBuildDate>Mon, 19 Sep 2022 11:11:27 &#43;0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/go-kratos/" rel="self" type="application/rss+xml" /><item>
-    <title>go-kratos 实际开发问题</title>
-    <link>http://HimawariSunFlower.github.io/posts/read_kratos_4/</link>
-    <pubDate>Mon, 19 Sep 2022 11:11:27 &#43;0800</pubDate>
-    <author>qiyuanh</author>
-    <guid>http://HimawariSunFlower.github.io/posts/read_kratos_4/</guid>
-    <description><![CDATA[repo层抽象优化问题 https://lailin.xyz/post/graceful-repo-code.html 关于repo层的接口优雅，抽象 kratos的biz层，data层不太能处理？ gorm这种具体orm不应当暴露给biz]]></description>
-</item>
-<item>
-    <title>go-kratos 微服务必须的功能及第三方库</title>
-    <link>http://HimawariSunFlower.github.io/posts/read_kratos_3/</link>
-    <pubDate>Tue, 13 Sep 2022 15:08:57 &#43;0800</pubDate>
-    <author>qiyuanh</author>
-    <guid>http://HimawariSunFlower.github.io/posts/read_kratos_3/</guid>
-    <description><![CDATA[服务发现 consul 基于name和id来区分不同注册 如果name或id相同，会互相覆盖 链路追踪 jaeger kratos的中间件通过[open-telemetry]]></description>
-</item>
-<item>
-    <title>go-kratos 模仿beershop的微服务demo运行及遇到的问题</title>
-    <link>http://HimawariSunFlower.github.io/posts/read_kratos_2/</link>
-    <pubDate>Mon, 05 Sep 2022 15:08:57 &#43;0800</pubDate>
-    <author>qiyuanh</author>
-    <guid>http://HimawariSunFlower.github.io/posts/read_kratos_2/</guid>
-    <description><![CDATA[错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误 { &#34;errors&#34;: { &#34;internal&#34;: [ &#34;error&#34; ] } } 无法显示具体信息，必须按规定的错误]]></description>
-</item>
-<item>
-    <title>go-kratos 初体验</title>
-    <link>http://HimawariSunFlower.github.io/posts/read_kratos_1/</link>
-    <pubDate>Tue, 30 Aug 2022 16:21:14 &#43;0800</pubDate>
-    <author>qiyuanh</author>
-    <guid>http://HimawariSunFlower.github.io/posts/read_kratos_1/</guid>
-    <description><![CDATA[#动手之前需要理清楚微服务逻辑 1.wire生成出来的wire_gen.go，goland同包读取不到，飘红。(实际编译成功了) :插件中卸载 go]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go-kratos on johndoe</title>
+    <link>http://HimawariSunFlower.github.io/categories/go-kratos/</link>
+    <description>Recent content in go-kratos on johndoe</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 19 Sep 2022 11:11:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/go-kratos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go-kratos 实际开发问题</title>
+      <link>http://HimawariSunFlower.github.io/posts/read_kratos_4/</link>
+      <pubDate>Mon, 19 Sep 2022 11:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/read_kratos_4/</guid>
+      <description>repo层抽象优化问题 https://lailin.xyz/post/graceful-repo-code.html 关于repo层的接口优雅，抽象 kratos的biz层，data层不太能处理？ gorm这种具体orm不应当暴露给biz biz不能调用data会相互引用 暂时没有思考出好的方式 ddd相关及kratos版ddd相关
+与dart客户端的grpc对接
+返回error 他那边是try catch到再用grpcError类解析处理，等同于go的grpc包里的toRpcErr() rpc分类：</description>
+    </item>
+    
+    <item>
+      <title>go-kratos 微服务必须的功能及第三方库</title>
+      <link>http://HimawariSunFlower.github.io/posts/read_kratos_3/</link>
+      <pubDate>Tue, 13 Sep 2022 15:08:57 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/read_kratos_3/</guid>
+      <description>服务发现 consul
+基于name和id来区分不同注册 如果name或id相同，会互相覆盖 链路追踪 jaeger
+kratos的中间件通过[open-telemetry]集成数据再传递给jaeger Metrics open-telemetry + Grafana + Prometheus
+都没有中文文档，otel的中文文档和没有一样T T</description>
+    </item>
+    
+    <item>
+      <title>go-kratos 模仿beershop的微服务demo运行及遇到的问题</title>
+      <link>http://HimawariSunFlower.github.io/posts/read_kratos_2/</link>
+      <pubDate>Mon, 05 Sep 2022 15:08:57 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/read_kratos_2/</guid>
+      <description>错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误 { &amp;#34;errors&amp;#34;: { &amp;#34;internal&amp;#34;: [ &amp;#34;error&amp;#34; ] } } 无法显示具体信息，必须按规定的错误处理，定义生成pb文件之后包装一下
+v1.ErrorParamError(&amp;#34;jwt token missing&amp;#34;) v1.ErrorParamError(err.Error()) 尝试docker部署微服务，docker build 报错 failed to solve with frontend dockerfile.v0: failed to create LLB definition: unexpected status code [manifests stable-slim]: 403 Forbidden 设置 docker Engine =&amp;gt; features:{buildkit:false}
+docker 里是不能用127.0.0.1访问宿主机的数据库的，需要配置里配宿主机ip
+root只能localhost访问，需要创建新用户, % 表示任意ip都能访问 dokerfile 里的make build执行的就是makefile里的build命令，需要改指向的cmd路径 可以用这个指令 docker run -it &amp;lt;image:version&amp;gt; bash
+去排查docker运行时的问题 casbin中间件 取不到req的mehod 只有ctx和一个interface的req Request Method func(handler middleware.Handler) middleware.Handler { return func(ctx context.Context, req interface{}) (interface{}, error) { tr, _ := transport.</description>
+    </item>
+    
+    <item>
+      <title>go-kratos 初体验</title>
+      <link>http://HimawariSunFlower.github.io/posts/read_kratos_1/</link>
+      <pubDate>Tue, 30 Aug 2022 16:21:14 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/read_kratos_1/</guid>
+      <description>#动手之前需要理清楚微服务逻辑
+1.wire生成出来的wire_gen.go，goland同包读取不到，飘红。(实际编译成功了)
+:插件中卸载 go wire util 就好了
+2.proto文件，import &amp;ldquo;google/api/annotations.proto&amp;rdquo; 等应用飘红。
+:在goland设置的protobuf里添加third_party,
+belike: 3.项目结构
+├── Dockerfile ├── LICENSE ├── Makefile ├── README.md ├── api // 下面维护了微服务使用的proto文件以及根据它们所生成的go文件 │ └── helloworld │ └── v1 │ ├── error_reason.pb.go │ ├── error_reason.proto │ ├── error_reason.swagger.json │ ├── greeter.pb.go │ ├── greeter.proto │ ├── greeter.swagger.json │ ├── greeter_grpc.pb.go │ └── greeter_http.pb.go ├── cmd // 整个项目启动的入口文件 │ └── server │ ├── main.go │ ├── wire.go // 我们使用wire来维护依赖注入 │ └── wire_gen.</description>
+    </item>
+    
+  </channel>
 </rss>
