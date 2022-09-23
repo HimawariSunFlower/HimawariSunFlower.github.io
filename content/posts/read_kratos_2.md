@@ -1,9 +1,10 @@
 ---
-title: "go-kratos 开发1"
+title: "go-kratos 模仿beershop的微服务demo运行及遇到的问题"
 date: 2022-09-05T15:08:57+08:00
 draft: false
+categories: ["go-kratos"]
 ---
-模仿beershop的微服务demo运行及遇到的问题
+
 
 1. 错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误
 ```
@@ -25,7 +26,8 @@ draft: false
 
 2. 尝试docker部署微服务，docker build 报错
 ```
-failed to solve with frontend dockerfile.v0: failed to create LLB definition: unexpected status code [manifests stable-slim]: 403 Forbidden
+failed to solve with frontend dockerfile.v0: failed to create LLB definition:   
+unexpected status code [manifests stable-slim]: 403 Forbidden
 ```
 设置 docker Engine => features:{buildkit:false}
 

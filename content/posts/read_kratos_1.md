@@ -1,7 +1,8 @@
 ---
-title: "go-kratos初体验"
+title: "go-kratos 初体验"
 date: 2022-08-30T16:21:14+08:00
 draft: false
+categories: ["go-kratos"]
 ---
 
 #动手之前需要理清楚微服务逻辑  
@@ -18,9 +19,8 @@ belike:
 
 <br/>
 
-3.项目结构
+3.项目结构  
 ```
-  .
 ├── Dockerfile  
 ├── LICENSE
 ├── Makefile  
@@ -47,14 +47,16 @@ belike:
 ├── go.mod
 ├── go.sum
 ├── internal  // 该服务所有不对外暴露的代码，通常的业务逻辑都在这下面，使用internal避免错误引用
-│   ├── biz   // 业务逻辑的组装层，类似 DDD 的 domain 层，data 类似 DDD 的 repo，而 repo 接口在这里定义，使用依赖倒置的原则。
+│   ├── biz   // 业务逻辑的组装层，类似 DDD 的 domain 层，data 类似 DDD 的 repo，而 repo 接口  
+在这里定义，使用依赖倒置的原则。
 │   │   ├── README.md
 │   │   ├── biz.go
 │   │   └── greeter.go
 │   ├── conf  // 内部使用的config的结构定义，使用proto格式生成
 │   │   ├── conf.pb.go
 │   │   └── conf.proto
-│   ├── data  // 业务数据访问，包含 cache、db 等封装，实现了 biz 的 repo 接口。我们可能会把 data 与 dao 混淆在一起，data 偏重业务的含义，它所要做的是将领域对象重新拿出来，我们去掉了 DDD 的 infra层。
+│   ├── data  // 业务数据访问，包含 cache、db 等封装，实现了 biz 的 repo 接口。我们可能会把  
+ data 与 dao 混淆在一起，data 偏重业务的含义，它所要做的是将领域对象重新拿出来，我们去掉了 DDD 的 infra层。
 │   │   ├── README.md
 │   │   ├── data.go
 │   │   └── greeter.go
@@ -62,7 +64,8 @@ belike:
 │   │   ├── grpc.go
 │   │   ├── http.go
 │   │   └── server.go
-│   └── service  // 实现了 api 定义的服务层，类似 DDD 的 application 层，处理 DTO 到 biz 领域实体的转换(DTO -> DO)，同时协同各类 biz 交互，但是不应处理复杂逻辑
+│   └── service  // 实现了 api 定义的服务层，类似 DDD 的 application 层，处理 DTO 到 biz 领域实体的  
+转换(DTO -> DO)，同时协同各类 biz 交互，但是不应处理复杂逻辑
 │       ├── README.md
 │       ├── greeter.go
 │       └── service.go
@@ -76,7 +79,7 @@ belike:
     └── validate
         ├── README.md
         └── validate.proto
-```  
+```
 
 4.cmd下的main文件由wire依赖注入，需要理解wire
 

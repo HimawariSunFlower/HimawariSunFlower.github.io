@@ -1,9 +1,10 @@
 ---
-title: "go-kratos 开发2"
+title: "go-kratos 微服务必须的功能及第三方库"
 date: 2022-09-13T15:08:57+08:00
 draft: true
+categories: ["go-kratos"]
 ---
-微服务必须的功能及第三方库  
+  
 
 服务发现   [consul](https://github.com/hashicorp/consul)
 ```

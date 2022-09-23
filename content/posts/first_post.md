@@ -2,12 +2,14 @@
 title: "上传github,ssh报错及解决方法"
 date: 2022-08-30T11:11:27+08:00
 draft: false
+categories: ["git"]
 ---
 
 
 上传github报错
 ```
-ssh: Could not resolve hostname github.com:HimawariSunFlower: nodename nor servname provided, or not known
+ssh: Could not resolve hostname github.com:HimawariSunFlower: nodename nor servname provided,   
+or not known
 fatal: Could not read from remote repository.
 
 Please make sure you have the correct access rights

@@ -4,13 +4,45 @@
         <link>http://HimawariSunFlower.github.io/posts/</link>
         <description>所有文章 | HimawariSunFlower&#39;s home</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>aleena35ed@gmail.com (qiyuanh)</managingEditor>
-            <webMaster>aleena35ed@gmail.com (qiyuanh)</webMaster><lastBuildDate>Tue, 13 Sep 2022 15:08:57 &#43;0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>go-kratos 开发2</title>
+            <webMaster>aleena35ed@gmail.com (qiyuanh)</webMaster><lastBuildDate>Fri, 23 Sep 2022 14:11:27 &#43;0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>go1.16 docker build遇到的问题</title>
+    <link>http://HimawariSunFlower.github.io/posts/go_sum/</link>
+    <pubDate>Fri, 23 Sep 2022 14:11:27 &#43;0800</pubDate>
+    <author>qiyuanh</author>
+    <guid>http://HimawariSunFlower.github.io/posts/go_sum/</guid>
+    <description><![CDATA[在我本机能运行的Dockerfile，在同事机器上build步骤会失败 Dockerfile: FROM golang:1.16 AS builder ARG APP_RELATIVE_PATH COPY . /src WORKDIR /src/app/${APP_RELATIVE_PATH} RUN GOPROXY=https://goproxy.cn make build FROM debian:stable-slim ARG APP_RELATIVE_PATH RUN apt-get update &amp;&amp; apt-get install -y --no-install-recommends \ ca-certificates \ netbase \ &amp;&amp; rm]]></description>
+</item>
+<item>
+    <title>docker 初体验</title>
+    <link>http://HimawariSunFlower.github.io/posts/doceker_1/</link>
+    <pubDate>Tue, 20 Sep 2022 11:11:27 &#43;0800</pubDate>
+    <author>qiyuanh</author>
+    <guid>http://HimawariSunFlower.github.io/posts/doceker_1/</guid>
+    <description><![CDATA[1.传进去的配置文件 如果是监听端口，应当是0.0.0.0 如果是外部服务，应当是对应ip，无法直接用0.0.0.0去连接宿主机 2.Dockerfile]]></description>
+</item>
+<item>
+    <title>go-kratos 实际开发问题</title>
+    <link>http://HimawariSunFlower.github.io/posts/read_kratos_4/</link>
+    <pubDate>Mon, 19 Sep 2022 11:11:27 &#43;0800</pubDate>
+    <author>qiyuanh</author>
+    <guid>http://HimawariSunFlower.github.io/posts/read_kratos_4/</guid>
+    <description><![CDATA[repo层抽象优化问题 https://lailin.xyz/post/graceful-repo-code.html 关于repo层的接口优雅，抽象 kratos的biz层，data层不太能处理？ gorm这种具体orm不应当暴露给biz]]></description>
+</item>
+<item>
+    <title>gorm 遇到的问题</title>
+    <link>http://HimawariSunFlower.github.io/posts/gorm_1/</link>
+    <pubDate>Mon, 19 Sep 2022 11:11:27 &#43;0800</pubDate>
+    <author>qiyuanh</author>
+    <guid>http://HimawariSunFlower.github.io/posts/gorm_1/</guid>
+    <description><![CDATA[updates(&amp;struct{}),值为0不会跟新，需要updates(map)或者save()或者update()]]></description>
+</item>
+<item>
+    <title>go-kratos 微服务必须的功能及第三方库</title>
     <link>http://HimawariSunFlower.github.io/posts/read_kratos_3/</link>
     <pubDate>Tue, 13 Sep 2022 15:08:57 &#43;0800</pubDate>
     <author>qiyuanh</author>
     <guid>http://HimawariSunFlower.github.io/posts/read_kratos_3/</guid>
-    <description><![CDATA[微服务必须的功能及第三方库 服务发现 consul 基于name和id来区分不同注册 如果name或id相同，会互相覆盖 链路追踪 jaeger kratos的中间件通过[o]]></description>
+    <description><![CDATA[服务发现 consul 基于name和id来区分不同注册 如果name或id相同，会互相覆盖 链路追踪 jaeger kratos的中间件通过[open-telemetry]]></description>
 </item>
 <item>
     <title>mac常用快捷键</title>
@@ -21,12 +53,12 @@
     <description><![CDATA[通用 Home键=Fn+左方向 End键=Fn+右方向 PageUP=Fn+上方向 PageDOWN=Fn+下方向 终端 tab 完整的目录或文件名称 tab+tab 显示可]]></description>
 </item>
 <item>
-    <title>go-kratos 开发1</title>
+    <title>go-kratos 模仿beershop的微服务demo运行及遇到的问题</title>
     <link>http://HimawariSunFlower.github.io/posts/read_kratos_2/</link>
     <pubDate>Mon, 05 Sep 2022 15:08:57 &#43;0800</pubDate>
     <author>qiyuanh</author>
     <guid>http://HimawariSunFlower.github.io/posts/read_kratos_2/</guid>
-    <description><![CDATA[模仿beershop的微服务demo运行及遇到的问题 错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误]]></description>
+    <description><![CDATA[错误如果不定义为kratos的错误类型，直接输出errors.error，会输出私有错误 { &#34;errors&#34;: { &#34;internal&#34;: [ &#34;error&#34; ] } } 无法显示具体信息，必须按规定的错误]]></description>
 </item>
 <item>
     <title>gframe 框架源码阅读1</title>
@@ -37,7 +69,7 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>go-kratos初体验</title>
+    <title>go-kratos 初体验</title>
     <link>http://HimawariSunFlower.github.io/posts/read_kratos_1/</link>
     <pubDate>Tue, 30 Aug 2022 16:21:14 &#43;0800</pubDate>
     <author>qiyuanh</author>

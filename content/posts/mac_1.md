@@ -2,6 +2,7 @@
 title: "mac常用快捷键"
 date: 2022-09-13T11:11:27+08:00
 draft: false
+categories: ["mac"]
 ---
 通用
 ```
@@ -48,4 +49,14 @@ goland
     shift+command+-> 选中到行尾
     command+delete 行删除
     option+command+l 格式化文件
+```
+
+trem
+```
+    pwd 当前路径
+    ps -ef | grep 进程名  查看进程号
+    sudo lsof -i :端口  查看端口被哪个进程监听
+    sudo lsof -nP -p 进程号 | grep LISTEN      查看进程监听的端口
+    sudo lsof -nP | grep LISTEN | grep 进程号  查看进程监听的端口
+    sudo lsof -nP | grep LISTEN | grep 端口号  查看监听端口的进程
 ```

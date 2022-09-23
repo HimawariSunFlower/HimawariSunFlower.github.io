@@ -4,32 +4,30 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>go-kratos 开发2 - HimawariSunFlower&#39;s home</title><meta name="Description" content="后端技术博客"><meta property="og:title" content="go-kratos 开发2" />
-<meta property="og:description" content="微服务必须的功能及第三方库 服务发现 consul 基于name和id来区分不同注册 如果name或id相同，会互相覆盖 链路追踪 jaeger kratos的中间件通过[o" />
+        <title>go-kratos 微服务必须的功能及第三方库 - HimawariSunFlower&#39;s home</title><meta name="Description" content="后端技术博客"><meta property="og:title" content="go-kratos 微服务必须的功能及第三方库" />
+<meta property="og:description" content="服务发现 consul 基于name和id来区分不同注册 如果name或id相同，会互相覆盖 链路追踪 jaeger kratos的中间件通过[open-telemetry" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://HimawariSunFlower.github.io/posts/read_kratos_3/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-13T15:08:57+08:00" />
-<meta property="article:modified_time" content="2022-09-13T15:08:57+08:00" /><meta property="og:site_name" content="HimawariSunFlower&#39;s home" />
+<meta property="article:modified_time" content="2022-09-15T10:52:01+08:00" /><meta property="og:site_name" content="HimawariSunFlower&#39;s home" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="go-kratos 开发2"/>
-<meta name="twitter:description" content="微服务必须的功能及第三方库 服务发现 consul 基于name和id来区分不同注册 如果name或id相同，会互相覆盖 链路追踪 jaeger kratos的中间件通过[o"/>
+<meta name="twitter:title" content="go-kratos 微服务必须的功能及第三方库"/>
+<meta name="twitter:description" content="服务发现 consul 基于name和id来区分不同注册 如果name或id相同，会互相覆盖 链路追踪 jaeger kratos的中间件通过[open-telemetry"/>
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://HimawariSunFlower.github.io/posts/read_kratos_3/" /><link rel="prev" href="http://HimawariSunFlower.github.io/posts/mac_1/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://HimawariSunFlower.github.io/posts/read_kratos_3/" /><link rel="prev" href="http://HimawariSunFlower.github.io/posts/mac_1/" /><link rel="next" href="http://HimawariSunFlower.github.io/posts/gorm_1/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "go-kratos 开发2",
+        "headline": "go-kratos 微服务必须的功能及第三方库",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/HimawariSunFlower.github.io\/posts\/read_kratos_3\/"
-        },"genre": "posts","wordcount":  128 ,
-        "url": "http:\/\/HimawariSunFlower.github.io\/posts\/read_kratos_3\/","datePublished": "2022-09-13T15:08:57+08:00","dateModified": "2022-09-13T15:08:57+08:00","publisher": {
+        },"genre": "posts","wordcount":  115 ,
+        "url": "http:\/\/HimawariSunFlower.github.io\/posts\/read_kratos_3\/","datePublished": "2022-09-13T15:08:57+08:00","dateModified": "2022-09-15T10:52:01+08:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -45,7 +43,7 @@
             <a href="/" title="HimawariSunFlower&#39;s home">HimawariSunFlower&#39;s home</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw" aria-hidden="true"></i>
@@ -58,7 +56,8 @@
                         </span>
                     </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a></div>
+                </a>
+            </div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
@@ -87,7 +86,7 @@
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a class="menu-item" href="/posts/" title="">文章</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
@@ -100,9 +99,10 @@
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">go-kratos 开发2</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/HimawariSunFlower" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>qiyuanh</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-13">2022-09-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 128 字&nbsp;
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">go-kratos 微服务必须的功能及第三方库</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/HimawariSunFlower" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>qiyuanh</a>
+</span>&nbsp;<span class="post-category">收录于 <a href="/categories/go-kratos/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>go-kratos</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-13">2022-09-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 115 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -110,27 +110,31 @@
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><p>微服务必须的功能及第三方库</p>
-<p>服务发现   <a href="https://github.com/hashicorp/consul" target="_blank" rel="noopener noreffer ">consul</a></p>
+            </div><div class="content" id="content"><p>服务发现   <a href="https://github.com/hashicorp/consul" target="_blank" rel="noopener noreffer">consul</a>
+</p>
 <pre tabindex="0"><code>    基于name和id来区分不同注册
     如果name或id相同，会互相覆盖
 </code></pre><!-- raw HTML omitted -->
-<p>链路追踪   <a href="https://github.com/jaegertracing/jaeger" target="_blank" rel="noopener noreffer ">jaeger</a></p>
+<p>链路追踪   <a href="https://github.com/jaegertracing/jaeger" target="_blank" rel="noopener noreffer">jaeger</a>
+</p>
 <pre tabindex="0"><code>kratos的中间件通过[open-telemetry]集成数据再传递给jaeger  
 </code></pre><!-- raw HTML omitted -->
-<p>Metrics <a href="https://github.com/open-telemetry/opentelemetry-go" target="_blank" rel="noopener noreffer ">open-telemetry</a> + <a href="https://github.com/grafana/grafana" target="_blank" rel="noopener noreffer ">Grafana</a> + <a href="https://github.com/prometheus/prometheus" target="_blank" rel="noopener noreffer ">Prometheus</a></p>
+<p>Metrics <a href="https://github.com/open-telemetry/opentelemetry-go" target="_blank" rel="noopener noreffer">open-telemetry</a>
+ + <a href="https://github.com/grafana/grafana" target="_blank" rel="noopener noreffer">Grafana</a>
+ + <a href="https://github.com/prometheus/prometheus" target="_blank" rel="noopener noreffer">Prometheus</a>
+</p>
 <!-- raw HTML omitted -->
 <p>都没有中文文档，otel的中文文档和没有一样T T</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2022-09-13</span>
+                <span>更新于 2022-09-15</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_3/" data-title="go-kratos 开发2"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_3/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_3/" data-title="go-kratos 开发2" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_3/" data-title="go-kratos 开发2"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_3/" data-title="go-kratos 开发2"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_3/" data-title="go-kratos 开发2" data-description=""><i class="fab fa-blogger fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_3/" data-title="go-kratos 开发2"><i class="fab fa-evernote fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_3/" data-title="go-kratos 微服务必须的功能及第三方库"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_3/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 WhatsApp" data-sharer="whatsapp" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_3/" data-title="go-kratos 微服务必须的功能及第三方库" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_3/" data-title="go-kratos 微服务必须的功能及第三方库"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@6.20.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_3/" data-title="go-kratos 微服务必须的功能及第三方库"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Blogger" data-sharer="blogger" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_3/" data-title="go-kratos 微服务必须的功能及第三方库" data-description=""><i class="fab fa-blogger fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="http://HimawariSunFlower.github.io/posts/read_kratos_3/" data-title="go-kratos 微服务必须的功能及第三方库"><i class="fab fa-evernote fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -142,14 +146,15 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/mac_1/" class="prev" rel="prev" title="mac常用快捷键"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>mac常用快捷键</a></div>
+    <div class="post-nav"><a href="/posts/mac_1/" class="prev" rel="prev" title="mac常用快捷键"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>mac常用快捷键</a>
+            <a href="/posts/gorm_1/" class="next" rel="next" title="gorm 遇到的问题">gorm 遇到的问题<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="utterances" class="comment"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">Utterances</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/HimawariSunFlower" target="_blank">qiyuanh</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/HimawariSunFlower" target="_blank">qiyuanh</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 
@@ -158,5 +163,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"HimawariSunFlower/HimawariSunFlower.github.io"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"","algoliaIndex":"","algoliaSearchKey":"","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.1/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"HimawariSunFlower/HimawariSunFlower.github.io"}},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"","algoliaIndex":"","algoliaSearchKey":"","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
