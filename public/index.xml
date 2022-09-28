@@ -6,7 +6,20 @@
     <description>Recent content on HimawariSunFlower&#39;s home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 23 Sep 2022 14:11:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 28 Sep 2022 17:11:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go-kratos源码阅读之errgroup</title>
+      <link>http://HimawariSunFlower.github.io/posts/read_kratos_5/</link>
+      <pubDate>Wed, 28 Sep 2022 17:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/read_kratos_5/</guid>
+      <description>阅读kratos源码发时候，发现在app.Run()方法里调用了一个叫errgroup的官方库(居然和singleflight一个库)。 决定去看一下这是个什么样的库，golang.org/x/sync/errgroup。
+发现是官方对goroutines group的一个封装。
+Package errgroup provides synchronization, error propagation, and Context cancelation for groups of goroutines working on subtasks of a common task. errgroup的结构：
+type Group struct { cancel func() wg sync.WaitGroup sem chan token errOnce sync.Once err error } errgroup提供了以下方法：
+func WithContext(ctx context.Context) (*Group, context.Context) func (g *Group) Go(f func() error) func (g *Group) SetLimit(n int) func (g *Group) TryGo(f func() error) bool func (g *Group) Wait() error withcontext是根据context去build一个errgroup，并返回从ctx派生的context。派生的Context在传递给Go的函数第一次返回非nil错误或Wait第一次返回时被取消，以先发生的情况为准。</description>
+    </item>
+    
     <item>
       <title>go1.16 docker build遇到的问题</title>
       <link>http://HimawariSunFlower.github.io/posts/go_sum/</link>
