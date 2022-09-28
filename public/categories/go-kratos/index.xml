@@ -40,7 +40,7 @@ func WithContext(ctx context.Context) (*Group, context.Context) func (g *Group) 
       <description>服务发现 consul
 基于name和id来区分不同注册 如果name或id相同，会互相覆盖 链路追踪 jaeger
 kratos的中间件通过[open-telemetry]集成数据再传递给jaeger Metrics open-telemetry + Grafana + Prometheus
-都没有中文文档，otel的中文文档和没有一样T T</description>
+&amp;hellip;更多待添加</description>
     </item>
     
     <item>

@@ -1,7 +1,7 @@
 ---
 title: "go-kratos 微服务必须的功能及第三方库"
 date: 2022-09-13T15:08:57+08:00
-draft: true
+draft: false
 categories: ["go-kratos"]
 ---
   
@@ -23,4 +23,4 @@ Metrics [open-telemetry](https://github.com/open-telemetry/opentelemetry-go) + [
 
 <br/>
 
-都没有中文文档，otel的中文文档和没有一样T T
+...更多待添加
