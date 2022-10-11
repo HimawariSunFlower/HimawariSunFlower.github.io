@@ -6,13 +6,24 @@
     <description>Recent content on HimawariSunFlower&#39;s home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 28 Sep 2022 17:11:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Oct 2022 16:11:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>go-kratos源码阅读之errgroup</title>
-      <link>http://HimawariSunFlower.github.io/posts/read_kratos_5/</link>
+      <title>uml</title>
+      <link>http://HimawariSunFlower.github.io/posts/uml/</link>
+      <pubDate>Sat, 08 Oct 2022 16:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/uml/</guid>
+      <description>UML 是统一建模语言的简称，它是一种由一整套图表组成的标准化建模语言。
+结构性图: 类图 (Class Diagram) 组件图 (Component Diagram) 部署图 (Deployment Diagram) 对象图 (Object Diagram) 包图 (Package Diagram) 复合结构图 (Composite Structure Diagram) 轮廓图 (Profile Diagram)
+行为性图: 用例图 (Use Case Diagram) 活动图 (Activity Diagram) 状态机图 (State Machine Diagram) 序列图 (Sequence Diagram) 通訊圖 (Communication Diagram) 交互概述图 (Interaction Overview Diagram) 时序图 (Timing Diagram)</description>
+    </item>
+    
+    <item>
+      <title>go源码阅读之errgroup</title>
+      <link>http://HimawariSunFlower.github.io/posts/go_1/</link>
       <pubDate>Wed, 28 Sep 2022 17:11:27 +0800</pubDate>
       
-      <guid>http://HimawariSunFlower.github.io/posts/read_kratos_5/</guid>
+      <guid>http://HimawariSunFlower.github.io/posts/go_1/</guid>
       <description>阅读kratos源码发时候，发现在app.Run()方法里调用了一个叫errgroup的官方库(居然和singleflight一个库)。 决定去看一下这是个什么样的库，golang.org/x/sync/errgroup。
 发现是官方对goroutines group的一个封装。
 Package errgroup provides synchronization, error propagation, and Context cancelation for groups of goroutines working on subtasks of a common task. errgroup的结构：
@@ -38,7 +49,9 @@ FROM golang:1.16 AS builder ARG APP_RELATIVE_PATH COPY . /src WORKDIR /src/app/$
       <pubDate>Tue, 20 Sep 2022 11:11:27 +0800</pubDate>
       
       <guid>http://HimawariSunFlower.github.io/posts/doceker_1/</guid>
-      <description>1.传进去的配置文件 如果是监听端口，应当是0.0.0.0 如果是外部服务，应当是对应ip，无法直接用0.0.0.0去连接宿主机 2.Dockerfile</description>
+      <description>1.传进去的配置文件 如果是监听端口，应当是0.0.0.0 如果是外部服务，应当是对应ip，无法直接用0.0.0.0去连接宿主机
+2.Dockerfile
+3.docker 指令</description>
     </item>
     
     <item>

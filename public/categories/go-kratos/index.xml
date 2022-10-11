@@ -8,11 +8,11 @@
     <language>en</language>
     <lastBuildDate>Wed, 28 Sep 2022 17:11:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/go-kratos/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>go-kratos源码阅读之errgroup</title>
-      <link>http://HimawariSunFlower.github.io/posts/read_kratos_5/</link>
+      <title>go源码阅读之errgroup</title>
+      <link>http://HimawariSunFlower.github.io/posts/go_1/</link>
       <pubDate>Wed, 28 Sep 2022 17:11:27 +0800</pubDate>
       
-      <guid>http://HimawariSunFlower.github.io/posts/read_kratos_5/</guid>
+      <guid>http://HimawariSunFlower.github.io/posts/go_1/</guid>
       <description>阅读kratos源码发时候，发现在app.Run()方法里调用了一个叫errgroup的官方库(居然和singleflight一个库)。 决定去看一下这是个什么样的库，golang.org/x/sync/errgroup。
 发现是官方对goroutines group的一个封装。
 Package errgroup provides synchronization, error propagation, and Context cancelation for groups of goroutines working on subtasks of a common task. errgroup的结构：
