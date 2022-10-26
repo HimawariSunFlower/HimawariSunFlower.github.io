@@ -23,6 +23,7 @@ categories: ["ci/cd","devops"]
    3.  protoc-gen-go: error:inconsistent package import paths
        1.  protoc-gen-go不存在报的这个错误，神秘
    4.  每一个构建都是隔离的，build protos这种指令应当放到before_script里让每个stage都触发生成
+   5.  only:-changes: 路径不能包含变量，直接从根目录指向对应目录
 
 4. 技巧
    1. include template可以直接引用gitlab官方预制的一些模板，包括代码检查之类的。[链接](https://jihulab.com/gitlab-cn/gitlab/-/tree/master/lib/gitlab/ci/templates)
