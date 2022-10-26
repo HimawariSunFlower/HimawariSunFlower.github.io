@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ansible on HimawariSunFlower&#39;s home</title>
+    <link>http://HimawariSunFlower.github.io/categories/ansible/</link>
+    <description>Recent content in ansible on HimawariSunFlower&#39;s home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 18 Oct 2022 16:05:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/ansible/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gitlab ci/cd&#43;ansible 远程ssh服务器deploy遇到的问题</title>
+      <link>http://HimawariSunFlower.github.io/posts/cicd_2/</link>
+      <pubDate>Tue, 18 Oct 2022 16:05:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/cicd_2/</guid>
+      <description> 调用本地sh文件需要权限 报错：/bin/bash: deploy.sh: Permission denied 解决：在yml调用sh前chmod777 deploy.sh gitlab变量默认只在受保护的分支上生效 报错：直接使用变量会找不到 解决：将对应分支设置为受保护 ansible连接远程服务器失败 报错： Unable to parse /Users/mac/root@host1 as an inventory source 解决：注意：如果传入的节点只有一台，末尾的逗号不能省略🔗 ansible all -i host161,host162 &amp;ndash;list-hosts ansible all -i host161, &amp;ndash;list-hosts ssh密钥认证失败 报错： root@hosts | UNREACHABLE! =&amp;gt; { &amp;#34;changed&amp;#34;: false, &amp;#34;msg&amp;#34;: &amp;#34;Failed to connect to the host via ssh: Host key verification failed.&amp;#34;, &amp;#34;unreachable&amp;#34;: true } 解决：需要参数 &amp;ndash;ssh-common-args=&amp;rsquo;-o StrictHostKeyChecking=no&#39; 总体belike：ansible &amp;ndash;ssh-common-args=&amp;rsquo;-o StrictHostKeyChecking=no&amp;rsquo; -i &amp;ldquo;$DEPLOY_TO_HOSTS&amp;rdquo;, &amp;ldquo;*&amp;rdquo; -m command -a &amp;rsquo;ls&#39; ansible 参考 新建文件夹，文件 用file模块 拷贝本机文件去远程服务器 用copy模块 command模块 不能使用&amp;gt;,&amp;lt;,cd等方法，可以使用shell模块 &amp;ldquo;nohup &amp;amp;&amp;rdquo; linux后台运行程序 </description>
+    </item>
+    
+  </channel>
+</rss>

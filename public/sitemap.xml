@@ -2,19 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://HimawariSunFlower.github.io/categories/ansible/</loc>
+    <lastmod>2022-10-18T16:05:27+08:00</lastmod>
+  </url><url>
     <loc>http://HimawariSunFlower.github.io/categories/</loc>
-    <lastmod>2022-10-11T16:05:27+08:00</lastmod>
+    <lastmod>2022-10-18T16:05:27+08:00</lastmod>
   </url><url>
     <loc>http://HimawariSunFlower.github.io/categories/devops/</loc>
-    <lastmod>2022-10-11T16:05:27+08:00</lastmod>
+    <lastmod>2022-10-18T16:05:27+08:00</lastmod>
   </url><url>
-    <loc>http://HimawariSunFlower.github.io/posts/cicd/</loc>
-    <lastmod>2022-10-11T16:05:27+08:00</lastmod>
+    <loc>http://HimawariSunFlower.github.io/posts/cicd_2/</loc>
+    <lastmod>2022-10-18T16:05:27+08:00</lastmod>
   </url><url>
     <loc>http://HimawariSunFlower.github.io/</loc>
-    <lastmod>2022-10-11T16:05:27+08:00</lastmod>
+    <lastmod>2022-10-18T16:05:27+08:00</lastmod>
   </url><url>
     <loc>http://HimawariSunFlower.github.io/posts/</loc>
+    <lastmod>2022-10-18T16:05:27+08:00</lastmod>
+  </url><url>
+    <loc>http://HimawariSunFlower.github.io/categories/ut/</loc>
+    <lastmod>2022-10-12T16:05:27+08:00</lastmod>
+  </url><url>
+    <loc>http://HimawariSunFlower.github.io/posts/ut/</loc>
+    <lastmod>2022-10-12T16:05:27+08:00</lastmod>
+  </url><url>
+    <loc>http://HimawariSunFlower.github.io/posts/cicd_1/</loc>
     <lastmod>2022-10-11T16:05:27+08:00</lastmod>
   </url><url>
     <loc>http://HimawariSunFlower.github.io/categories/uml/</loc>
@@ -79,6 +91,10 @@
   </url><url>
     <loc>http://HimawariSunFlower.github.io/posts/first_post/</loc>
     <lastmod>2022-08-30T11:11:27+08:00</lastmod>
+  </url><url>
+    <loc>http://HimawariSunFlower.github.io/posts/consul/</loc>
+  </url><url>
+    <loc>http://HimawariSunFlower.github.io/posts/jaeger/</loc>
   </url><url>
     <loc>http://HimawariSunFlower.github.io/authors/</loc>
   </url><url>

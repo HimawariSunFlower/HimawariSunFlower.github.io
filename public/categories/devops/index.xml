@@ -6,20 +6,28 @@
     <description>Recent content in devops on HimawariSunFlower&#39;s home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Oct 2022 16:05:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Oct 2022 16:05:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gitlab ci/cd&#43;ansible 远程ssh服务器deploy遇到的问题</title>
+      <link>http://HimawariSunFlower.github.io/posts/cicd_2/</link>
+      <pubDate>Tue, 18 Oct 2022 16:05:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/cicd_2/</guid>
+      <description> 调用本地sh文件需要权限 报错：/bin/bash: deploy.sh: Permission denied 解决：在yml调用sh前chmod777 deploy.sh gitlab变量默认只在受保护的分支上生效 报错：直接使用变量会找不到 解决：将对应分支设置为受保护 ansible连接远程服务器失败 报错： Unable to parse /Users/mac/root@host1 as an inventory source 解决：注意：如果传入的节点只有一台，末尾的逗号不能省略🔗 ansible all -i host161,host162 &amp;ndash;list-hosts ansible all -i host161, &amp;ndash;list-hosts ssh密钥认证失败 报错： root@hosts | UNREACHABLE! =&amp;gt; { &amp;#34;changed&amp;#34;: false, &amp;#34;msg&amp;#34;: &amp;#34;Failed to connect to the host via ssh: Host key verification failed.&amp;#34;, &amp;#34;unreachable&amp;#34;: true } 解决：需要参数 &amp;ndash;ssh-common-args=&amp;rsquo;-o StrictHostKeyChecking=no&#39; 总体belike：ansible &amp;ndash;ssh-common-args=&amp;rsquo;-o StrictHostKeyChecking=no&amp;rsquo; -i &amp;ldquo;$DEPLOY_TO_HOSTS&amp;rdquo;, &amp;ldquo;*&amp;rdquo; -m command -a &amp;rsquo;ls&#39; ansible 参考 新建文件夹，文件 用file模块 拷贝本机文件去远程服务器 用copy模块 command模块 不能使用&amp;gt;,&amp;lt;,cd等方法，可以使用shell模块 &amp;ldquo;nohup &amp;amp;&amp;rdquo; linux后台运行程序 </description>
+    </item>
+    
     <item>
       <title>gitlab ci/cd</title>
-      <link>http://HimawariSunFlower.github.io/posts/cicd/</link>
+      <link>http://HimawariSunFlower.github.io/posts/cicd_1/</link>
       <pubDate>Tue, 11 Oct 2022 16:05:27 +0800</pubDate>
       
-      <guid>http://HimawariSunFlower.github.io/posts/cicd/</guid>
+      <guid>http://HimawariSunFlower.github.io/posts/cicd_1/</guid>
       <description>官方文档
 关于大仓模式微服务的ci/cd构建
 cd应该针对master分支，也就是主分支代码提交时(发版时)才触发自动构建。 我们通常只想构建、测试和部署应用程序的那些已经更改的服务ーー而不是将所有服务放在一起，因为这可能非常耗时。使用only/change子句来实现。rule/changes应当是更好的实现。 根据gitlab官方的cicd实现，根目录的yml去include ci文件夹下的对应服务的yml文件，来实现一个大仓下多个服务的cicd。 todo 如何去发布到不同服务器？ 目前选用ansible 踩坑：
 jobs config should contain at least one visible job https://gitlab.com/gitlab-org/gitlab/-/issues/341693 疑似已修复，gitlab15.2 请注意，GitLab Runner 的默认 pull policy 为 always，这意味着即使本地副本可用，runner 也会尝试从 GitLab 容器镜像库中提取 Docker 镜像。如果您更喜欢仅使用本地可用的 Docker 镜像，则可以在离线环境中将 GitLab Runner pull_policy 设置为 if-not-present。但是，如果不在离线环境中，我们建议将拉取策略设置保持为 always，因为这样可以在 CI/CD 流水线中使用更新的扫描程序。 runner默认使用always策略，无法通过配置文件修改 protoc-gen-go: error:inconsistent package import paths protoc-gen-go不存在报的这个错误，神秘 每一个构建都是隔离的，build protos这种指令应当放到before_script里让每个stage都触发生成 技巧
-include template可以直接引用gitlab官方预制的一些模板，包括代码检查之类的。链接 gitlab提供了一批预定义变量. 链接 参考文档
-微服务架构下CI/CD如何落地 大仓模式及其在gitlab ci/cd上的应用
-gitlab自己的ci/cd yml文件</description>
+include template可以直接引用gitlab官方预制的一些模板，包括代码检查之类的。链接 gitlab提供了一批预定义变量. 链接 命令
+dependencies: 通过提供要从中获取产物的作业列表，来限制将哪些产物传递给特定作业。也就是说在 deploy阶段dependencies指定build阶段的job可以取到build打出来的包。 tags:用于选择 runner 的标签列表（选取运行对象） needs：在 stage 顺序之前执行的作业（发动效果的cost） extends：此作业继承自的配置条目（有继承就可以抽象一些公用的方法出来了） artifacts：使用 artifacts 指定在作业 succeeds, fails, 或 always 时附加到作业的文件和目录列表。(根据artfacts在build，deploy两个阶段传递打出来的包) 参考文档</description>
     </item>
     
   </channel>

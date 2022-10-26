@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ut on HimawariSunFlower&#39;s home</title>
+    <link>http://HimawariSunFlower.github.io/categories/ut/</link>
+    <description>Recent content in ut on HimawariSunFlower&#39;s home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Oct 2022 16:05:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/ut/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>微服务与单元测试</title>
+      <link>http://HimawariSunFlower.github.io/posts/ut/</link>
+      <pubDate>Wed, 12 Oct 2022 16:05:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/ut/</guid>
+      <description>选用testify，goconvey来做单测。 选用mockery来根据go文件里的interface生成service的mockstruct 选用go-sqlmock来做sqlmock 直接mockrepo的单测方式，只是测试service层：
+func TestConcurrentPost(t *testing.T) { Convey(&amp;#34;unit testing concurrent_post query service&amp;#34;, t, func() { logger := log.NewStdLogger(os.Stdout) repo := mocks.NewConcurrentPostRepo(t) repo.On(&amp;#34;QueryConcurrentPost&amp;#34;, mock.Anything, mock.AnythingOfType(&amp;#34;biz.Option&amp;#34;), mock.AnythingOfType(&amp;#34;biz.Option&amp;#34;)).Return(&amp;amp;biz.ConcurrentPost{UserId: 1, Id: 1}, nil) _hrm := NewHRMServiceService(nil, biz.NewConcurrentPostUsecase(repo, logger), nil, nil, nil, nil, logger) _hrm.QueryConcurrentPost(context.Background(), &amp;amp;v1.ReqConcurrentPostId{ UserId: uint64(1), Id: 1, }) repo.AssertExpectations(t) }) } mock sql，可以测试到service层，biz层和data层，但是具体sql并不能测试， 因为sql返回结果是mock的期望值。
+func TestConcurrentPostWithSql(t *testing.T) { Convey(&amp;#34;unit testing concurrent_post query service&amp;#34;, t, func() { logger := log.NewStdLogger(os.Stdout) db, sm, err := sqlmock.</description>
+    </item>
+    
+  </channel>
+</rss>
