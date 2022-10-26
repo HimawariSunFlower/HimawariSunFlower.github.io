@@ -28,7 +28,16 @@ categories: ["ci/cd","devops"]
    1. include template可以直接引用gitlab官方预制的一些模板，包括代码检查之类的。[链接](https://jihulab.com/gitlab-cn/gitlab/-/tree/master/lib/gitlab/ci/templates)
    2. gitlab提供了一批预定义变量. [链接](https://docs.gitlab.cn/jh/ci/variables/predefined_variables.html)
 
-5. 参考文档  
+5. 命令
+   ```
+      dependencies: 通过提供要从中获取产物的作业列表，来限制将哪些产物传递给特定作业。也就是说在 deploy阶段dependencies指定build阶段的job可以取到build打出来的包。
+      tags:用于选择 runner 的标签列表（选取运行对象）
+      needs：在 stage 顺序之前执行的作业（发动效果的cost）
+      extends：此作业继承自的配置条目（有继承就可以抽象一些公用的方法出来了）
+      artifacts：使用 artifacts 指定在作业 succeeds, fails, 或 always 时附加到作业的文件和目录列表。(根据artfacts在build，deploy两个阶段传递打出来的包)
+   ```
+
+6. 参考文档  
 [微服务架构下CI/CD如何落地](https://www.upyun.com/tech/article/602/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E4%B8%8B%20CI%2FCD%20%E5%A6%82%E4%BD%95%E8%90%BD%E5%9C%B0.html)    
 [大仓模式及其在gitlab ci/cd上的应用](https://medium.com/swlh/on-monorepos-and-the-deployment-with-gitlab-ci-cd-bc080cfc6dce)  
 [gitlab自己的ci/cd yml文件](https://jihulab.com/gitlab-cn/gitlab/-/blob/main-jh/.gitlab-ci.yml)

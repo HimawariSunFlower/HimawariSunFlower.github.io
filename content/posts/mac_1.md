@@ -49,6 +49,8 @@ goland
     shift+command+-> 选中到行尾
     command+delete 行删除
     option+command+l 格式化文件
+    option+shift+command+[ 从当前光标选中到代码块开始 (没选到最开始就多敲一下[)
+    option+shift+command+] 从当前光标选中到代码块结束
 ```
 
 trem
@@ -59,4 +61,23 @@ trem
     sudo lsof -nP -p 进程号 | grep LISTEN      查看进程监听的端口
     sudo lsof -nP | grep LISTEN | grep 进程号  查看进程监听的端口
     sudo lsof -nP | grep LISTEN | grep 端口号  查看监听端口的进程
+```
+
+linux
+```
+    查看对应端口进程信息
+    netstat -tunlp | grep 端口号
+
+    根据进程名获取系统进程信息
+    ps aux | grep 程序名
+```
+
+copilot+mac+goland [url](https://docs.github.com/cn/copilot/getting-started-with-github-copilot/getting-started-with-github-copilot-in-a-jetbrains-ide)
+```
+    接受建议：Tab
+    拒绝建议：Esc
+    打开Copilot：Command+Shift+A  （会打开一个单独的面板，展示10个建议）
+    下一条建议：Option + ]
+    上一条建议：Option + [
+    触发行内Copilot: Option + \ （Coplit还没有给出建议或者建议被拒绝了，希望手工触发它提供建议）
 ```
