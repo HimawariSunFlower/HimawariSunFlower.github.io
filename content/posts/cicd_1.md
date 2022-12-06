@@ -13,6 +13,7 @@ categories: ["ci/cd","devops"]
    3. 根据gitlab官方的cicd实现，根目录的yml去include ci文件夹下的对应服务的yml文件，来实现一个大仓下多个服务的cicd。
     4. todo 如何去发布到不同服务器？
        1. 目前选用ansible
+       2. todo k8s
 
 3. 踩坑：
    1. jobs config should contain at least one visible job
