@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vue3 on HimawariSunFlower&#39;s home</title>
+    <link>http://HimawariSunFlower.github.io/categories/vue3/</link>
+    <description>Recent content in vue3 on HimawariSunFlower&#39;s home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 16 Dec 2022 10:11:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/vue3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用vue3&#43;typescript实现与后端的grpc通信</title>
+      <link>http://HimawariSunFlower.github.io/posts/ts-proto/</link>
+      <pubDate>Fri, 16 Dec 2022 10:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/ts-proto/</guid>
+      <description>使用vue3+typescript实现grpc, makefile:
+NODE_BIN_PATH=./node_modules/.bin OUT_DIR=./src/proto ifeq ($(GOHOSTOS), windows) #the `find.exe` is different from `find` in bash/shell. #to see https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/find. #changed to use git-bash.exe to run find cli or other cli friendly, caused of every developer has a Git. Git_Bash= $(subst cmd\,bin\bash.exe,$(dir $(shell where git))) INTERNAL_PROTO_FILES=$(shell $(Git_Bash) -c &amp;quot;find app -name *.proto&amp;quot;) API_PROTO_FILES=$(shell $(Git_Bash) -c &#39;find proto -path proto/third_party -prune -o -name &amp;quot;*.proto&amp;quot; | grep -v &amp;quot;^proto/third_party&amp;quot;&#39;) else INTERNAL_PROTO_FILES=$(shell find app -name *.</description>
+    </item>
+    
+    <item>
+      <title>使用vue3&#43;typescript实现与后端的grpc通信</title>
+      <link>http://HimawariSunFlower.github.io/posts/ts_1/</link>
+      <pubDate>Mon, 19 Sep 2022 10:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/ts_1/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

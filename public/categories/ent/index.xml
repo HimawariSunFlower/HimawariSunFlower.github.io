@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ent on HimawariSunFlower&#39;s home</title>
+    <link>http://HimawariSunFlower.github.io/categories/ent/</link>
+    <description>Recent content in ent on HimawariSunFlower&#39;s home</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 28 Oct 2022 16:05:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/ent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ent与图数据库</title>
+      <link>http://HimawariSunFlower.github.io/posts/ent/</link>
+      <pubDate>Fri, 28 Oct 2022 16:05:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/ent/</guid>
+      <description> 参考资料 ent [什么是图数据库GDB]{https://help.aliyun.com/document_detail/102799.html} https://log.zvz.im/2020/06/21/go-ent-graph-based-orm/ GDB的优点 ent库本身不支持根据struct T创建数据库数据，但是可以根据template生成对应方法去打补丁实现。 2. docs </description>
+    </item>
+    
+  </channel>
+</rss>

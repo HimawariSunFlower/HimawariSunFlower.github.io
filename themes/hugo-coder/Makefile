@@ -10,3 +10,4 @@ demo:
 
 release: build
 	rm -rf ./resources && cp -r ./exampleSite/resources ./resources
+

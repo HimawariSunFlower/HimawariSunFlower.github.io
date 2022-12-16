@@ -13,9 +13,9 @@
       <pubDate>Wed, 12 Oct 2022 16:05:27 +0800</pubDate>
       
       <guid>http://HimawariSunFlower.github.io/posts/ut/</guid>
-      <description>选用testify，goconvey来做单测。 选用mockery来根据go文件里的interface生成service的mockstruct 选用go-sqlmock来做sqlmock 直接mockrepo的单测方式，只是测试service层：
+      <description>选用testify，goconvey来做单测。 选用mockery来根据go文件里的interface生成service的mockstruct mockery &amp;ndash;all 选用go-sqlmock来做sqlmock 使用go-sqlmock+gorm+mysql时，如果使用create，update等非原生方法，需要设置SkipInitializeWithVersion: true，关掉默认事务防止mock失败 直接mockrepo的单测方式，只是测试service层：
 func TestConcurrentPost(t *testing.T) { Convey(&amp;#34;unit testing concurrent_post query service&amp;#34;, t, func() { logger := log.NewStdLogger(os.Stdout) repo := mocks.NewConcurrentPostRepo(t) repo.On(&amp;#34;QueryConcurrentPost&amp;#34;, mock.Anything, mock.AnythingOfType(&amp;#34;biz.Option&amp;#34;), mock.AnythingOfType(&amp;#34;biz.Option&amp;#34;)).Return(&amp;amp;biz.ConcurrentPost{UserId: 1, Id: 1}, nil) _hrm := NewHRMServiceService(nil, biz.NewConcurrentPostUsecase(repo, logger), nil, nil, nil, nil, logger) _hrm.QueryConcurrentPost(context.Background(), &amp;amp;v1.ReqConcurrentPostId{ UserId: uint64(1), Id: 1, }) repo.AssertExpectations(t) }) } mock sql，可以测试到service层，biz层和data层，但是具体sql并不能测试， 因为sql返回结果是mock的期望值。
-func TestConcurrentPostWithSql(t *testing.T) { Convey(&amp;#34;unit testing concurrent_post query service&amp;#34;, t, func() { logger := log.NewStdLogger(os.Stdout) db, sm, err := sqlmock.</description>
+func TestConcurrentPostWithSql(t *testing.T) { Convey(&amp;#34;unit testing concurrent_post query service&amp;#34;, t, func() { logger := log.</description>
     </item>
     
   </channel>

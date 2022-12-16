@@ -13,21 +13,15 @@
     
 
     <meta name="author" content="qiyuanh">
-    <meta name="description" content="1.传进去的配置文件 如果是监听端口，应当是0.0.0.0 如果是外部服务，应当是对应ip，无法直接用0.0.0.0去连接宿主机
-2.Dockerfile
-3.docker 指令 4.volumes 挂在相对路径的话，根节点在dockerfile的文件或者docker-compose.yml的路径 5🔗 cmd使用[]形式不能取到环境变量 更具体的原理">
+    <meta name="description" content=" 传进去的配置文件 如果是监听端口，应当是0.0.0.0 如果是外部服务，应当是对应ip，无法直接用0.0.0.0去连接宿主机 Dockerfile docker 指令 volumes 挂在相对路径的话，根节点在dockerfile的文件或者docker-compose.yml的路径 🔗 cmd使用[]形式不能取到环境变量 更具体的原理 多步构建 copy会跟在run后面执行 ">
     <meta name="keywords" content="blog,developer,personal">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="docker 初体验"/>
-<meta name="twitter:description" content="1.传进去的配置文件 如果是监听端口，应当是0.0.0.0 如果是外部服务，应当是对应ip，无法直接用0.0.0.0去连接宿主机
-2.Dockerfile
-3.docker 指令 4.volumes 挂在相对路径的话，根节点在dockerfile的文件或者docker-compose.yml的路径 5🔗 cmd使用[]形式不能取到环境变量 更具体的原理"/>
+<meta name="twitter:description" content=" 传进去的配置文件 如果是监听端口，应当是0.0.0.0 如果是外部服务，应当是对应ip，无法直接用0.0.0.0去连接宿主机 Dockerfile docker 指令 volumes 挂在相对路径的话，根节点在dockerfile的文件或者docker-compose.yml的路径 🔗 cmd使用[]形式不能取到环境变量 更具体的原理 多步构建 copy会跟在run后面执行 "/>
 
     <meta property="og:title" content="docker 初体验" />
-<meta property="og:description" content="1.传进去的配置文件 如果是监听端口，应当是0.0.0.0 如果是外部服务，应当是对应ip，无法直接用0.0.0.0去连接宿主机
-2.Dockerfile
-3.docker 指令 4.volumes 挂在相对路径的话，根节点在dockerfile的文件或者docker-compose.yml的路径 5🔗 cmd使用[]形式不能取到环境变量 更具体的原理" />
+<meta property="og:description" content=" 传进去的配置文件 如果是监听端口，应当是0.0.0.0 如果是外部服务，应当是对应ip，无法直接用0.0.0.0去连接宿主机 Dockerfile docker 指令 volumes 挂在相对路径的话，根节点在dockerfile的文件或者docker-compose.yml的路径 🔗 cmd使用[]形式不能取到环境变量 更具体的原理 多步构建 copy会跟在run后面执行 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://HimawariSunFlower.github.io/posts/doceker_1/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-20T11:11:27+08:00" />
@@ -153,13 +147,17 @@
 
       <div>
         
-        <p>1.传进去的配置文件
+        <ol>
+<li>传进去的配置文件
 如果是监听端口，应当是0.0.0.0
-如果是外部服务，应当是对应ip，无法直接用0.0.0.0去连接宿主机<br>
-2.Dockerfile<br>
-3.docker 指令
-4.volumes 挂在相对路径的话，根节点在dockerfile的文件或者docker-compose.yml的路径
-5<a href="https://blog.csdn.net/qq_38983728/article/details/98741935">🔗</a> cmd使用[]形式不能取到环境变量 <a href="https://yeasy.gitbook.io/docker_practice/image/dockerfile/cmd">更具体的原理</a></p>
+如果是外部服务，应当是对应ip，无法直接用0.0.0.0去连接宿主机</li>
+<li>Dockerfile</li>
+<li>docker 指令</li>
+<li>volumes 挂在相对路径的话，根节点在dockerfile的文件或者docker-compose.yml的路径</li>
+<li><a href="https://blog.csdn.net/qq_38983728/article/details/98741935">🔗</a> cmd使用[]形式不能取到环境变量 <a href="https://yeasy.gitbook.io/docker_practice/image/dockerfile/cmd">更具体的原理</a></li>
+<li>多步构建</li>
+<li>copy会跟在run后面执行</li>
+</ol>
 
       </div>
 

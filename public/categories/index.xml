@@ -6,7 +6,52 @@
     <description>Recent content in Categories on HimawariSunFlower&#39;s home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Oct 2022 16:05:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Dec 2022 10:11:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>grpc</title>
+      <link>http://HimawariSunFlower.github.io/categories/grpc/</link>
+      <pubDate>Fri, 16 Dec 2022 10:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/categories/grpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ts</title>
+      <link>http://HimawariSunFlower.github.io/categories/ts/</link>
+      <pubDate>Fri, 16 Dec 2022 10:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/categories/ts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue3</title>
+      <link>http://HimawariSunFlower.github.io/categories/vue3/</link>
+      <pubDate>Fri, 16 Dec 2022 10:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/categories/vue3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ent</title>
+      <link>http://HimawariSunFlower.github.io/categories/ent/</link>
+      <pubDate>Fri, 28 Oct 2022 16:05:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/categories/ent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GDB</title>
+      <link>http://HimawariSunFlower.github.io/categories/gdb/</link>
+      <pubDate>Fri, 28 Oct 2022 16:05:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/categories/gdb/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ansible</title>
       <link>http://HimawariSunFlower.github.io/categories/ansible/</link>
@@ -85,6 +130,24 @@
       <pubDate>Mon, 19 Sep 2022 11:11:27 +0800</pubDate>
       
       <guid>http://HimawariSunFlower.github.io/categories/gorm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>consul</title>
+      <link>http://HimawariSunFlower.github.io/categories/consul/</link>
+      <pubDate>Mon, 19 Sep 2022 10:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/categories/consul/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jaeger</title>
+      <link>http://HimawariSunFlower.github.io/categories/jaeger/</link>
+      <pubDate>Mon, 19 Sep 2022 10:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/categories/jaeger/</guid>
       <description></description>
     </item>
     

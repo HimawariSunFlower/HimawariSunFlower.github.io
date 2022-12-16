@@ -6,7 +6,26 @@
     <description>Recent content in Posts on HimawariSunFlower&#39;s home</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Oct 2022 16:05:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Dec 2022 10:11:27 +0800</lastBuildDate><atom:link href="http://HimawariSunFlower.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用vue3&#43;typescript实现与后端的grpc通信</title>
+      <link>http://HimawariSunFlower.github.io/posts/ts-proto/</link>
+      <pubDate>Fri, 16 Dec 2022 10:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/ts-proto/</guid>
+      <description>使用vue3+typescript实现grpc, makefile:
+NODE_BIN_PATH=./node_modules/.bin OUT_DIR=./src/proto ifeq ($(GOHOSTOS), windows) #the `find.exe` is different from `find` in bash/shell. #to see https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/find. #changed to use git-bash.exe to run find cli or other cli friendly, caused of every developer has a Git. Git_Bash= $(subst cmd\,bin\bash.exe,$(dir $(shell where git))) INTERNAL_PROTO_FILES=$(shell $(Git_Bash) -c &amp;quot;find app -name *.proto&amp;quot;) API_PROTO_FILES=$(shell $(Git_Bash) -c &#39;find proto -path proto/third_party -prune -o -name &amp;quot;*.proto&amp;quot; | grep -v &amp;quot;^proto/third_party&amp;quot;&#39;) else INTERNAL_PROTO_FILES=$(shell find app -name *.</description>
+    </item>
+    
+    <item>
+      <title>ent与图数据库</title>
+      <link>http://HimawariSunFlower.github.io/posts/ent/</link>
+      <pubDate>Fri, 28 Oct 2022 16:05:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/ent/</guid>
+      <description> 参考资料 ent [什么是图数据库GDB]{https://help.aliyun.com/document_detail/102799.html} https://log.zvz.im/2020/06/21/go-ent-graph-based-orm/ GDB的优点 ent库本身不支持根据struct T创建数据库数据，但是可以根据template生成对应方法去打补丁实现。 2. docs </description>
+    </item>
+    
     <item>
       <title>gitlab ci/cd&#43;ansible 远程ssh服务器deploy遇到的问题</title>
       <link>http://HimawariSunFlower.github.io/posts/cicd_2/</link>
@@ -22,9 +41,9 @@
       <pubDate>Wed, 12 Oct 2022 16:05:27 +0800</pubDate>
       
       <guid>http://HimawariSunFlower.github.io/posts/ut/</guid>
-      <description>选用testify，goconvey来做单测。 选用mockery来根据go文件里的interface生成service的mockstruct 选用go-sqlmock来做sqlmock 直接mockrepo的单测方式，只是测试service层：
+      <description>选用testify，goconvey来做单测。 选用mockery来根据go文件里的interface生成service的mockstruct mockery &amp;ndash;all 选用go-sqlmock来做sqlmock 使用go-sqlmock+gorm+mysql时，如果使用create，update等非原生方法，需要设置SkipInitializeWithVersion: true，关掉默认事务防止mock失败 直接mockrepo的单测方式，只是测试service层：
 func TestConcurrentPost(t *testing.T) { Convey(&amp;#34;unit testing concurrent_post query service&amp;#34;, t, func() { logger := log.NewStdLogger(os.Stdout) repo := mocks.NewConcurrentPostRepo(t) repo.On(&amp;#34;QueryConcurrentPost&amp;#34;, mock.Anything, mock.AnythingOfType(&amp;#34;biz.Option&amp;#34;), mock.AnythingOfType(&amp;#34;biz.Option&amp;#34;)).Return(&amp;amp;biz.ConcurrentPost{UserId: 1, Id: 1}, nil) _hrm := NewHRMServiceService(nil, biz.NewConcurrentPostUsecase(repo, logger), nil, nil, nil, nil, logger) _hrm.QueryConcurrentPost(context.Background(), &amp;amp;v1.ReqConcurrentPostId{ UserId: uint64(1), Id: 1, }) repo.AssertExpectations(t) }) } mock sql，可以测试到service层，biz层和data层，但是具体sql并不能测试， 因为sql返回结果是mock的期望值。
-func TestConcurrentPostWithSql(t *testing.T) { Convey(&amp;#34;unit testing concurrent_post query service&amp;#34;, t, func() { logger := log.NewStdLogger(os.Stdout) db, sm, err := sqlmock.</description>
+func TestConcurrentPostWithSql(t *testing.T) { Convey(&amp;#34;unit testing concurrent_post query service&amp;#34;, t, func() { logger := log.</description>
     </item>
     
     <item>
@@ -35,8 +54,8 @@ func TestConcurrentPostWithSql(t *testing.T) { Convey(&amp;#34;unit testing conc
       <guid>http://HimawariSunFlower.github.io/posts/cicd_1/</guid>
       <description>官方文档
 关于大仓模式微服务的ci/cd构建
-cd应该针对master分支，也就是主分支代码提交时(发版时)才触发自动构建。 我们通常只想构建、测试和部署应用程序的那些已经更改的服务ーー而不是将所有服务放在一起，因为这可能非常耗时。使用only/change子句来实现。rule/changes应当是更好的实现。 根据gitlab官方的cicd实现，根目录的yml去include ci文件夹下的对应服务的yml文件，来实现一个大仓下多个服务的cicd。 todo 如何去发布到不同服务器？ 目前选用ansible 踩坑：
-jobs config should contain at least one visible job https://gitlab.com/gitlab-org/gitlab/-/issues/341693 疑似已修复，gitlab15.2 请注意，GitLab Runner 的默认 pull policy 为 always，这意味着即使本地副本可用，runner 也会尝试从 GitLab 容器镜像库中提取 Docker 镜像。如果您更喜欢仅使用本地可用的 Docker 镜像，则可以在离线环境中将 GitLab Runner pull_policy 设置为 if-not-present。但是，如果不在离线环境中，我们建议将拉取策略设置保持为 always，因为这样可以在 CI/CD 流水线中使用更新的扫描程序。 runner默认使用always策略，无法通过配置文件修改 protoc-gen-go: error:inconsistent package import paths protoc-gen-go不存在报的这个错误，神秘 每一个构建都是隔离的，build protos这种指令应当放到before_script里让每个stage都触发生成 技巧
+cd应该针对master分支，也就是主分支代码提交时(发版时)才触发自动构建。 我们通常只想构建、测试和部署应用程序的那些已经更改的服务ーー而不是将所有服务放在一起，因为这可能非常耗时。使用only/change子句来实现。rule/changes应当是更好的实现。 根据gitlab官方的cicd实现，根目录的yml去include ci文件夹下的对应服务的yml文件，来实现一个大仓下多个服务的cicd。 todo 如何去发布到不同服务器？ 目前选用ansible todo k8s 踩坑：
+jobs config should contain at least one visible job https://gitlab.com/gitlab-org/gitlab/-/issues/341693 疑似已修复，gitlab15.2 请注意，GitLab Runner 的默认 pull policy 为 always，这意味着即使本地副本可用，runner 也会尝试从 GitLab 容器镜像库中提取 Docker 镜像。如果您更喜欢仅使用本地可用的 Docker 镜像，则可以在离线环境中将 GitLab Runner pull_policy 设置为 if-not-present。但是，如果不在离线环境中，我们建议将拉取策略设置保持为 always，因为这样可以在 CI/CD 流水线中使用更新的扫描程序。 runner默认使用always策略，无法通过配置文件修改 protoc-gen-go: error:inconsistent package import paths protoc-gen-go不存在报的这个错误，神秘 每一个构建都是隔离的，build protos这种指令应当放到before_script里让每个stage都触发生成 only:-changes: 路径不能包含变量，直接从根目录指向对应目录 技巧
 include template可以直接引用gitlab官方预制的一些模板，包括代码检查之类的。链接 gitlab提供了一批预定义变量. 链接 命令
 dependencies: 通过提供要从中获取产物的作业列表，来限制将哪些产物传递给特定作业。也就是说在 deploy阶段dependencies指定build阶段的job可以取到build打出来的包。 tags:用于选择 runner 的标签列表（选取运行对象） needs：在 stage 顺序之前执行的作业（发动效果的cost） extends：此作业继承自的配置条目（有继承就可以抽象一些公用的方法出来了） artifacts：使用 artifacts 指定在作业 succeeds, fails, 或 always 时附加到作业的文件和目录列表。(根据artfacts在build，deploy两个阶段传递打出来的包) 参考文档</description>
     </item>
@@ -83,9 +102,7 @@ FROM golang:1.16 AS builder ARG APP_RELATIVE_PATH COPY . /src WORKDIR /src/app/$
       <pubDate>Tue, 20 Sep 2022 11:11:27 +0800</pubDate>
       
       <guid>http://HimawariSunFlower.github.io/posts/doceker_1/</guid>
-      <description>1.传进去的配置文件 如果是监听端口，应当是0.0.0.0 如果是外部服务，应当是对应ip，无法直接用0.0.0.0去连接宿主机
-2.Dockerfile
-3.docker 指令 4.volumes 挂在相对路径的话，根节点在dockerfile的文件或者docker-compose.yml的路径 5🔗 cmd使用[]形式不能取到环境变量 更具体的原理</description>
+      <description> 传进去的配置文件 如果是监听端口，应当是0.0.0.0 如果是外部服务，应当是对应ip，无法直接用0.0.0.0去连接宿主机 Dockerfile docker 指令 volumes 挂在相对路径的话，根节点在dockerfile的文件或者docker-compose.yml的路径 🔗 cmd使用[]形式不能取到环境变量 更具体的原理 多步构建 copy会跟在run后面执行 </description>
     </item>
     
     <item>
@@ -109,6 +126,33 @@ FROM golang:1.16 AS builder ARG APP_RELATIVE_PATH COPY . /src WORKDIR /src/app/$
     </item>
     
     <item>
+      <title>consul</title>
+      <link>http://HimawariSunFlower.github.io/posts/consul/</link>
+      <pubDate>Mon, 19 Sep 2022 10:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/consul/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jaeger</title>
+      <link>http://HimawariSunFlower.github.io/posts/jaeger/</link>
+      <pubDate>Mon, 19 Sep 2022 10:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/jaeger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>使用vue3&#43;typescript实现与后端的grpc通信</title>
+      <link>http://HimawariSunFlower.github.io/posts/ts_1/</link>
+      <pubDate>Mon, 19 Sep 2022 10:11:27 +0800</pubDate>
+      
+      <guid>http://HimawariSunFlower.github.io/posts/ts_1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>go-kratos 微服务必须的功能及第三方库</title>
       <link>http://HimawariSunFlower.github.io/posts/read_kratos_3/</link>
       <pubDate>Tue, 13 Sep 2022 15:08:57 +0800</pubDate>
@@ -129,7 +173,8 @@ kratos的中间件通过[open-telemetry]集成数据再传递给jaeger Metrics o
       <description>通用
 Home键=Fn+左方向 End键=Fn+右方向 PageUP=Fn+上方向 PageDOWN=Fn+下方向 终端
 tab 完整的目录或文件名称 tab+tab 显示可能的目录或文件名称补全列表 command+D 双屏 shift+command+D 取消双屏 control+A 到行首 control+E 到行尾 control+U 行删除 command+home 到顶部 command+end 到底部 command+pageup 上一页 command+pagedown 下一页 goland
-#部分是改建 command+z 撤消 control+T 重做 (撤消撤销) command+R 替换 shift+command+R 全局替换 command+f 搜索 shift+command+f 全局搜索 command+&amp;lt;- 到行首 command+-&amp;gt; 到行尾 shift+command+&amp;lt;- 选中到行首 shift+command+-&amp;gt; 选中到行尾 command+delete 行删除 option+command+l 格式化文件 option+shift+command+[ 从当前光标选中到代码块开始 (没选到最开始就多敲一下[) option+shift+command+] 从当前光标选中到代码块结束 trem
+#部分是改建 command+z 撤消 control+T 重做 (撤消撤销) command+R 替换 shift+command+R 全局替换 command+f 搜索 shift+command+f 全局搜索 command+&amp;lt;- 到行首 command+-&amp;gt; 到行尾 shift+command+&amp;lt;- 选中到行首 shift+command+-&amp;gt; 选中到行尾 command+delete 行删除 option+command+l 格式化文件 option+shift+command+[ 从当前光标选中到代码块开始 (没选到最开始就多敲一下[) option+shift+command+] 从当前光标选中到代码块结束 chrome
+mac 强制刷新：command+shift+r mac 普通刷新：command+r trem
 pwd 当前路径 ps -ef | grep 进程名 查看进程号 sudo lsof -i :端口 查看端口被哪个进程监听 sudo lsof -nP -p 进程号 | grep LISTEN 查看进程监听的端口 sudo lsof -nP | grep LISTEN | grep 进程号 查看进程监听的端口 sudo lsof -nP | grep LISTEN | grep 端口号 查看监听端口的进程 linux</description>
     </item>
     
@@ -184,24 +229,6 @@ ssh -T git@github.com是通的，ping不通
 尝试方法2 添加多个账户，添加到ssh-add，没有用，方法2延伸问题，ssh passphrase忘记，mac钥匙串可以找回
 最终解决方法 dns冲洗
 #Other ways to flush your dns, in windows in your terminal ipconfig /flushdns #on macos dscacheutil -flushcache #on linux service nscd restart </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://HimawariSunFlower.github.io/posts/consul/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://HimawariSunFlower.github.io/posts/consul/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://HimawariSunFlower.github.io/posts/jaeger/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://HimawariSunFlower.github.io/posts/jaeger/</guid>
-      <description></description>
     </item>
     
   </channel>
