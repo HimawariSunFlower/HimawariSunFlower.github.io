@@ -7,7 +7,10 @@ categories: ["ut"]
 
 1. 选用[testify](https://github.com/stretchr/testify)，[goconvey](https://github.com/smartystreets/goconvey)来做单测。
 2. 选用[mockery](https://github.com/vektra/mockery)来根据go文件里的interface生成service的mockstruct
+   1.  mockery --all
 3. 选用[go-sqlmock](https://github.com/DATA-DOG/go-sqlmock)来做sqlmock
+   1. 使用go-sqlmock+gorm+mysql时，如果使用create，update等非原生方法，需要设置SkipInitializeWithVersion: true，关掉默认事务防止mock失败
+
 
 
 直接mockrepo的单测方式，只是测试service层：

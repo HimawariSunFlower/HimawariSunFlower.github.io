@@ -53,6 +53,12 @@ goland
     option+shift+command+] 从当前光标选中到代码块结束
 ```
 
+chrome
+```
+    mac 强制刷新：command+shift+r
+    mac 普通刷新：command+r
+```
+
 trem
 ```
     pwd 当前路径
