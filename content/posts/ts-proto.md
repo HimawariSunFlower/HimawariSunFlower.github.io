@@ -158,6 +158,10 @@ categories: ["ts","grpc","vue3"]
                                 port_value: 9101 //服务端口
 
 最终方案  
+    0.环境搭建
+        npm i @protobuf-ts/plugin
+        npm i @protobuf-ts/protoc
+        npm i @protobuf-ts/grpcweb-transport    
     1.使用grpc-ts生产service.ts和service.client.ts  
     2.使用@protobuf-ts/grpcweb-transport让web使用fetch来通讯  
 
