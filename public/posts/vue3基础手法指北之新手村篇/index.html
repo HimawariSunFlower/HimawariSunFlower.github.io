@@ -13,30 +13,30 @@
     
 
     <meta name="author" content="qiyuanh">
-    <meta name="description" content="vue基础循环指北 1.1. 指令 1.2. 响应式 ref与reactive 1.3. 生命周期 第三方插件 2.1. 浏览器插件 vue.js devtools #cnblogs_post_body ul li { font: 14px px /2 Noto Sans SC !important; }
-vue3基础手法指北之新手村篇 &ndash; 市面上大火的游戏，虽然还不理解该游戏的设定但总之先从新手村出发
+    <meta name="description" content="vue基础循环指北 1.1. 指令 1.2. 响应式 ref与reactive 1.3. 生命周期 第三方插件 2.1. 浏览器插件 vue.js devtools vue3基础手法指北之新手村篇 &ndash; 市面上大火的游戏，虽然还不理解该游戏的设定但总之先从新手村出发
 前置官方新手教程 传送门
 1. vue基础循环指北 &ndash; 村好剑
 1.1. 指令 &ndash; 这是火1-火4，这是冰1-冰4，好了，你该练gcd循环了
-v-bind(:) 在模板中响应式的绑定attribute。 用处：可以用来动态改变style或其他值，比如配合v-for来设置select里option的key，value。 技能详情 v-model 在表单输入元素或组件上创建双向绑定。 用处：绑定后表单输入值就可以改变script定义的ref/reactive变量 技能详情 v-on(@) 给元素绑定事件监听器。 技能详情 v-if v-else v-else-if v-for v-show 不推荐同时使用v-if和v-for v-show通过display来实现v-if的效果，性能更有优势 v-text v-html v-solt v-once v-memo v-cloak v-pre 1.2. 响应式 ref与reactive &ndash; 你要的是这个金斧头还是这个银斧头呢？">
+v-bind(:) 在模板中响应式的绑定attribute。 用处：可以用来动态改变style或其他值，比如配合v-for来设置select里option的key，value。 技能详情 v-model 在表单输入元素或组件上创建双向绑定。 用处：绑定后表单输入值就可以改变script定义的ref/reactive变量 技能详情 v-on(@) 给元素绑定事件监听器。 技能详情 v-if v-else v-else-if v-for v-show 不推荐同时使用v-if和v-for v-show通过display来实现v-if的效果，性能更有优势 v-text v-html v-solt v-once v-memo v-cloak v-pre 1.2. 响应式 ref与reactive &ndash; 你要的是这个金斧头还是这个银斧头呢？
+import { ref,reactive } from &#39;vue&#39; let state1 = reactive({ count: 0 }) let state2 = ref({ count: 0 }) //在ts中修改值 state1.">
     <meta name="keywords" content="blog,developer,personal">
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="vue3基础手法指北之新手村篇"/>
-<meta name="twitter:description" content="vue基础循环指北 1.1. 指令 1.2. 响应式 ref与reactive 1.3. 生命周期 第三方插件 2.1. 浏览器插件 vue.js devtools #cnblogs_post_body ul li { font: 14px px /2 Noto Sans SC !important; }
-vue3基础手法指北之新手村篇 &ndash; 市面上大火的游戏，虽然还不理解该游戏的设定但总之先从新手村出发
+<meta name="twitter:description" content="vue基础循环指北 1.1. 指令 1.2. 响应式 ref与reactive 1.3. 生命周期 第三方插件 2.1. 浏览器插件 vue.js devtools vue3基础手法指北之新手村篇 &ndash; 市面上大火的游戏，虽然还不理解该游戏的设定但总之先从新手村出发
 前置官方新手教程 传送门
 1. vue基础循环指北 &ndash; 村好剑
 1.1. 指令 &ndash; 这是火1-火4，这是冰1-冰4，好了，你该练gcd循环了
-v-bind(:) 在模板中响应式的绑定attribute。 用处：可以用来动态改变style或其他值，比如配合v-for来设置select里option的key，value。 技能详情 v-model 在表单输入元素或组件上创建双向绑定。 用处：绑定后表单输入值就可以改变script定义的ref/reactive变量 技能详情 v-on(@) 给元素绑定事件监听器。 技能详情 v-if v-else v-else-if v-for v-show 不推荐同时使用v-if和v-for v-show通过display来实现v-if的效果，性能更有优势 v-text v-html v-solt v-once v-memo v-cloak v-pre 1.2. 响应式 ref与reactive &ndash; 你要的是这个金斧头还是这个银斧头呢？"/>
+v-bind(:) 在模板中响应式的绑定attribute。 用处：可以用来动态改变style或其他值，比如配合v-for来设置select里option的key，value。 技能详情 v-model 在表单输入元素或组件上创建双向绑定。 用处：绑定后表单输入值就可以改变script定义的ref/reactive变量 技能详情 v-on(@) 给元素绑定事件监听器。 技能详情 v-if v-else v-else-if v-for v-show 不推荐同时使用v-if和v-for v-show通过display来实现v-if的效果，性能更有优势 v-text v-html v-solt v-once v-memo v-cloak v-pre 1.2. 响应式 ref与reactive &ndash; 你要的是这个金斧头还是这个银斧头呢？
+import { ref,reactive } from &#39;vue&#39; let state1 = reactive({ count: 0 }) let state2 = ref({ count: 0 }) //在ts中修改值 state1."/>
 
     <meta property="og:title" content="vue3基础手法指北之新手村篇" />
-<meta property="og:description" content="vue基础循环指北 1.1. 指令 1.2. 响应式 ref与reactive 1.3. 生命周期 第三方插件 2.1. 浏览器插件 vue.js devtools #cnblogs_post_body ul li { font: 14px px /2 Noto Sans SC !important; }
-vue3基础手法指北之新手村篇 &ndash; 市面上大火的游戏，虽然还不理解该游戏的设定但总之先从新手村出发
+<meta property="og:description" content="vue基础循环指北 1.1. 指令 1.2. 响应式 ref与reactive 1.3. 生命周期 第三方插件 2.1. 浏览器插件 vue.js devtools vue3基础手法指北之新手村篇 &ndash; 市面上大火的游戏，虽然还不理解该游戏的设定但总之先从新手村出发
 前置官方新手教程 传送门
 1. vue基础循环指北 &ndash; 村好剑
 1.1. 指令 &ndash; 这是火1-火4，这是冰1-冰4，好了，你该练gcd循环了
-v-bind(:) 在模板中响应式的绑定attribute。 用处：可以用来动态改变style或其他值，比如配合v-for来设置select里option的key，value。 技能详情 v-model 在表单输入元素或组件上创建双向绑定。 用处：绑定后表单输入值就可以改变script定义的ref/reactive变量 技能详情 v-on(@) 给元素绑定事件监听器。 技能详情 v-if v-else v-else-if v-for v-show 不推荐同时使用v-if和v-for v-show通过display来实现v-if的效果，性能更有优势 v-text v-html v-solt v-once v-memo v-cloak v-pre 1.2. 响应式 ref与reactive &ndash; 你要的是这个金斧头还是这个银斧头呢？" />
+v-bind(:) 在模板中响应式的绑定attribute。 用处：可以用来动态改变style或其他值，比如配合v-for来设置select里option的key，value。 技能详情 v-model 在表单输入元素或组件上创建双向绑定。 用处：绑定后表单输入值就可以改变script定义的ref/reactive变量 技能详情 v-on(@) 给元素绑定事件监听器。 技能详情 v-if v-else v-else-if v-for v-show 不推荐同时使用v-if和v-for v-show通过display来实现v-if的效果，性能更有优势 v-text v-html v-solt v-once v-memo v-cloak v-pre 1.2. 响应式 ref与reactive &ndash; 你要的是这个金斧头还是这个银斧头呢？
+import { ref,reactive } from &#39;vue&#39; let state1 = reactive({ count: 0 }) let state2 = ref({ count: 0 }) //在ts中修改值 state1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://HimawariSunFlower.github.io/posts/vue3%E5%9F%BA%E7%A1%80%E6%89%8B%E6%B3%95%E6%8C%87%E5%8C%97%E4%B9%8B%E6%96%B0%E6%89%8B%E6%9D%91%E7%AF%87/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-01-13T15:01:27+08:00" />
@@ -188,11 +188,6 @@ v-bind(:) 在模板中响应式的绑定attribute。 用处：可以用来动态
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<p>#cnblogs_post_body ul li {
-font: 14px
-px
-/2 Noto Sans SC !important;
-}</p>
 <hr>
 <h1 id="vue3基础手法指北之新手村篇">
   vue3基础手法指北之新手村篇
