@@ -23,11 +23,6 @@ categories: ["vue3"]
     command+shift+p 
     generate TOC for md
 -->
-#cnblogs_post_body ul li {
-    font: 14px
-px
-/2 Noto Sans SC !important;
-}
 
 -----
 # vue3基础手法指北之新手村篇
