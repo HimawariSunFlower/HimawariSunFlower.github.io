@@ -304,6 +304,10 @@ endif
                             port_value: 9101 //服务端口
 </code></pre>
 <p>最终方案<br>
+0.环境搭建
+npm i @protobuf-ts/plugin
+npm i @protobuf-ts/protoc
+npm i @protobuf-ts/grpcweb-transport <br>
 1.使用grpc-ts生产service.ts和service.client.ts<br>
 2.使用@protobuf-ts/grpcweb-transport让web使用fetch来通讯</p>
 <pre><code>    import * as pb from &quot;../proto/grpc-ts/staff.client&quot;;
@@ -353,7 +357,9 @@ endif
       
         ©
         
-        2022
+          2022 -
+        
+        2023
          qiyuanh 
       
       
