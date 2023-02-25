@@ -67,6 +67,7 @@ trem
     sudo lsof -nP -p 进程号 | grep LISTEN      查看进程监听的端口
     sudo lsof -nP | grep LISTEN | grep 进程号  查看进程监听的端口
     sudo lsof -nP | grep LISTEN | grep 端口号  查看监听端口的进程
+    netstat -ntlp | grep 进程名  查看端口
 ```
 
 linux

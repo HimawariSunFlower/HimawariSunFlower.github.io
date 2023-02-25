@@ -66,6 +66,7 @@ categories: ["vue3"]
     state1 = reactive({count:1}) //会是state1失去响应式
     state2.value = {count:1} //正常运行
 ```
+注：通过toRef toRefs来解构的话可以保留reactive的响应性
 3. ref的唯一缺点就是在script中需要多写一个.value，不过在template里是不需要的。
 ```
     <script setup lang="ts">
@@ -93,6 +94,7 @@ categories: ["vue3"]
 
 其他的生命周期还没怎么用过，怎么说也还在新手村。[官方指北](https://cn.vuejs.org/api/composition-api-lifecycle.html#onmounted)
 
+computed 在调用方法内的响应式变量值变化时会调用方法，可以很方便的用来做页面数据统计，计算，不需要声明方法然后到处调用
 
 ##  2. <a name='-1'></a>第三方插件
 -- 原来你游也有act
